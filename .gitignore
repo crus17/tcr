@@ -1,6 +1,5 @@
 vendor/
 node_modules/
-storage/
 composer.phar
 composer.lock
 .env.*.php
