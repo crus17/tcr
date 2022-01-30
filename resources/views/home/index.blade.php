@@ -782,12 +782,12 @@
         </script>
 
 <div class="mgm" style="display: none;">
-<div class="txt" style="color:black;"></div>
+    <div class="txt" style="color:black;"></div>
 
     <script type="text/javascript">
         var listCountries = ['South Africa', 'USA', 'Germany', 'France', 'Italy', 'South Africa', 'Australia', 'South Africa', 'Canada', 'Argentina', 'Saudi Arabia', 'Mexico', 'South Africa', 'South Africa', 'Venezuela', 'South Africa', 'Sweden', 'South Africa', 'South Africa', 'Italy', 'South Africa', 'United Kingdom', 'South Africa', 'Greece', 'Cuba', 'South Africa', 'Portugal', 'Austria', 'South Africa', 'Panama', 'South Africa', 'South Africa', 'Netherlands', 'Switzerland', 'Belgium', 'Israel', 'Cyprus'];
         var listPlans = ['$500','$1,500','$1,000','$10,000','$2,000','$3,000','$4,000', '$600', '$700', '$2,500'];
-        var transarray = ['just <b>invested</b> with', 'just <b>withdrawn</b>', 'just <b>earn</b>', 'is <b>trading with</b>'];
+        var transarray = ['just <b>invested</b> with', 'just <b>withdrew</b>', 'just <b>earned</b>', 'is <b>trading with</b>'];
         interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
         var run = setInterval(request, interval);
     
@@ -808,7 +808,7 @@
 
         }
     </script>
-
+</div>
     
         
     </body>
