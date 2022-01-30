@@ -671,6 +671,15 @@
             </div>
             </div>
         </footer>
+
+        
+        <div id="capitol-callback">
+            <div class="cpt-circle"></div>
+            <div class="cpt-circle-fill"></div>
+            <a href="https://api.whatsapp.com/send?phone=+12064269848&text= Hello First Crypto Trading" id="WhatsAppBtnDesktop" target="_blank" class="main-button" lang="en">
+                <img src="https://nhtagent.com/nht-upload/assets/javascripts/WhatsApp/WhatsApp.png" width="100%">
+            </a>
+        </div>
         
         
         <div id="back-to-top">
@@ -779,36 +788,12 @@
                     });
                 }
             }); /*ready*/
-            </script>
+        </script>
 
-<style>
-        .mgm {
-            border-radius: 7px;
-            position: fixed;
-            z-index: 90;
-            bottom: 45%;
-            right: 50px;
-            background: #fff;
-            padding: 10px 27px;
-            box-shadow: 0px 5px 13px 0px rgba(0, 0, 0, .3);
-        }
-
-        .mgm a {
-            font-weight: 700;
-            display: block;
-            color: #2962FF;
-        }
-
-        .mgm a,
-        .mgm a:active {
-            transition: all .2s ease;
-            color: #2962FF;
-        }
-    </style>
 <div class="mgm" style="display: none;">
 <div class="txt" style="color:black;"></div>
 
-<script type="text/javascript">
+    <script type="text/javascript">
         var listCountries = ['South Africa', 'USA', 'Germany', 'France', 'Italy', 'South Africa', 'Australia', 'South Africa', 'Canada', 'Argentina', 'Saudi Arabia', 'Mexico', 'South Africa', 'South Africa', 'Venezuela', 'South Africa', 'Sweden', 'South Africa', 'South Africa', 'Italy', 'South Africa', 'United Kingdom', 'South Africa', 'Greece', 'Cuba', 'South Africa', 'Portugal', 'Austria', 'South Africa', 'Panama', 'South Africa', 'South Africa', 'Netherlands', 'Switzerland', 'Belgium', 'Israel', 'Cyprus'];
         var listPlans = ['$500','$1,500','$1,000','$10,000','$2,000','$3,000','$4,000', '$600', '$700', '$2,500'];
         var transarray = ['just <b>invested</b>', 'has <b>withdrawn</b>', 'is <b>trading with</b>'];
@@ -831,8 +816,11 @@
             run = setInterval(request, interval);
 
         }
-    </script
+    </script>
+
+    
         
     </body>
+    
 
 </html>
