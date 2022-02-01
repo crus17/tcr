@@ -37,7 +37,7 @@ class LoginController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function showLoginForm()
-    {
+    { 
         return view('auth.adminlogin',[
             'title' => 'Admin Login',
             'settings' => settings::where('id', '=', '1')->first(),
