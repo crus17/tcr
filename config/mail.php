@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'sendmail'),
+    'driver' => env('MAIL_DRIVER', 'smtp'),
 
     /*
     |--------------------------------------------------------------------------
@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'localhost'),
+    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -99,7 +99,7 @@ return [
     |
     */
 
-    'sendmail' => '/usr/sbin/sendmail -t',
+    'sendmail' => '/usr/sbin/sendmail -bs',
 
     /*
     |--------------------------------------------------------------------------
@@ -119,5 +119,7 @@ return [
             resource_path('views/vendor/mail'),
         ],
     ],
+
+    'pretend' => false,
 
 ];
