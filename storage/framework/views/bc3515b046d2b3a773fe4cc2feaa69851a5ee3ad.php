@@ -94,9 +94,14 @@
                             <div class="form__group">
 								
 								<select  class="form__input" name="country" id="country">
-								<option value="None">Select country</option>
+                                <option value="" selected disabled hidden>Select country</option>
+                                <option selected="selected"><?php echo e($user_country); ?></option>
 								<?php $__currentLoopData = $countries; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $country): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-								<option value="<?php echo e($country); ?>"><?php echo e($country); ?></option>
+                                    <?php if($country === $user_country): ?>
+                                        <option value="<?php echo e($country); ?>" selected><?php echo e($country); ?></option>
+                                    <?php else: ?>
+                                        <option value="<?php echo e($country); ?>"><?php echo e($country); ?></option>
+                                    <?php endif; ?>
 								<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </select>
                             </div>
