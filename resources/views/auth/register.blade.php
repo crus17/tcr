@@ -94,9 +94,14 @@
                             <div class="form__group">
 								
 								<select  class="form__input" name="country" id="country">
-								<option value="None">Select country</option>
+								<!-- <option value="None">Select country</option> -->
+                                <option selected="selected">{{$user_country}}</option>
 								@foreach($countries as $country)
-								<option value="{{$country}}">{{$country}}</option>
+                                    @if($country === $user_country)
+                                        <option value="{{$country}}" selected>{{$country}}</option>
+                                    @else
+                                        <option value="{{$country}}">{{$country}}</option>
+                                    @endif
 								@endforeach
                                 </select>
                             </div>
