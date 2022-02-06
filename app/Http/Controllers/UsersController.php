@@ -53,7 +53,10 @@ class UsersController extends Controller
         $total_withdrawals = DB::table('withdrawals')->select(DB::raw("SUM(amount) as total"))->
         where('status','Processed')->get();
         
-      $settings=settings::where('id', '=', '1')->first();
+        $settings=settings::where('id', '=', '1')->first();
+
+        $dumb_transactions = $this->fakewithdrawals(50);
+
         return view('home.index')->with(array(
           'settings' => $settings,
           'total_users' => users::count(),
@@ -69,7 +72,26 @@ class UsersController extends Controller
           'title' => $settings->site_title,
           'mplans' => plans::where('type','Main')->get(),
           'pplans' => plans::where('type','Promo')->get(),
+          'dumb_transactions' => $dumb_transactions
         ));
+    }
+
+    public static function fakewithdrawals($items){
+      $withdrawals = array();
+      $payment_status = array('Confirmed', 'Pending', 'Confirmed', 'Confirmed', 'Confirmed', 'Pending', 'Confirmed','Confirmed', 'Confirmed', 'Confirmed', 'Confirmed');
+      $btc_addresses = array("bc1q9927cupxa02z9dstvea7vc5jylhnge", "1GXwp2AA9sCVH6YojCQYWoZYgJDex4gua4 ", "bc1qcnvyhtsk8wtsah3x0tevuetauzwmpx", "bc1qulverwzp0w7yn226380x7latem8yll", "3QFWUsUav7QCsQyk4YPPrpofhfJrKp3cEP", "3GmoDxC3xiUqiNgCoRd5kLwxuBEKXiNdgR", "3CmDk6ycJvHKRd7utu28ipE99KNaraQDVU", "1EnyVF8uvKdsaU8j7DmWrX5UEB18f3zyXT", "14P1KwWJWWgNJJx6mnmL1Guty8HntSpFef", "bc1qc4afcpah5dc2wk59u3nyckslspmcgt", "12t58JnGTfQnaQ5Cn16dZkmX8s3n9AUbJ3", "1KxgMxoNr452WdKUg954LeRE9oBA2Gp9iv", "3MrckakGVpTiN4k7BWwcriJThF8PSzgBJA", "36NtYZ6aphDz8HUPcr8YMz3c1dmuadP2KL", "bc1qw96utm7qaa7dswpk2zk0hfmumwnn9k", "32YMi8dbMYbNeGfx47E1zMbKrQ1V7RfvXt", "3H1LMMK5r7sNVD3qZQ5Yye4vSiZw4koxAn", "bc1q0wd0szqevdgupsvxn8heu25f7jweey", "bc1qft8peyuyswfxxeya2pz30f28l8vcwm", "359qe55QteDyTYkA4igPRosXAwghAB82gd", "3KzpPbWSwB1ieEQphxHrZjFvSUUZhcnWrz", "3He4bZ5VYH34TqnL7bp1TwmLERfouMXymK", "bc1qn77xez53uk0gx3y26gvag7eac590ny", "19J7d69SM5MTGuQ9kNemB7QZVcc4wvmFxb", "bc1qjydgf78s9y48nsqv8h0ud8s5urr7yl", "38C7tPcncU6tMq8mofYzZqawuXi9jbvfHx", "bc1qkmqsf6sssh0a79cfpku6td4eqakar8", "36t4kt72fuWLr59THsT9uocWcZfHLa36g8", "3QK21b8K6FPXmSk1PQPiPNZLg6sJmsXgzq", "16h8XQ6Fp2D8B6wzoLbFYqdDGzAtNuTwu6", "17kRVKJ1qhZ7RcVr2LbA7rkDggDKDwL2Np", "1A62pv39TLnPjF5YJVAXgQaKXgV2WVAyfM", "3ACt1YWPzfkL5xkK4GRM6ADtqYk6nKxSR2", "1JSwFYFEPQ2P5wUY49q5m4xoJGjehPhaBL", "bc1qqdyy35rq69g4vqnnggqkp3gkuux6lj", "1CUGJgGozJYQEksnoEke6NooCtsA63Wo7U", "3BfXwF8a65BbEuF1XQsXUTLVbhY7nCS6XE", "bc1qwxuk5ufxjqcm2sru57exnh6sf92dsl", "16Dm39ryCHMKoUrK3DpbvDA7aYqBeKAgv8", "bc1q3q6df90wrwx0rrnwg4dmqp7zq895ug", "3NyBPZWNghegftf3Ldkbg1jae9sUe89mQP", "1DDSJuUVPqLMSPAW6RNXtELhmeRwdrbNt7", "bc1qm6uxjvvspjx09nk89m0npx3tc4cheh", "bc1qwgtykjf977qedln72kuk78ukmpdhrc", "3NEKjK6fYJcQFJRKjbWawhsyUJJb8L3fR5", "3HQxL1mZEGBib5FXkJs2xUVpw8wLaXDDyd", "bc1qy5qwph8fmqapenr54lcneafsh8rl63", "3GfW4aqsBBmiQUBNizkvGEJDr5GiHqAVPz", "bc1qghg2kgsg9tjkf2f9llgd5nhdt78tz6", "bc1q0xwcghyj7jhukq88ft05kftlel7ypj", "3HeGkqeZMc67onVrWNj4z4AF3aWPyj4y3y", "bc1qyfp72mrp44l4cmcp7gz9h7733z89f3", "bc1qx2tvmem5wc020u7599m3xnr4upl3gj", "1PJFvErsbv9xCeeTnWviJFd98j2AuKF2Dd", "3HhDvH7YMiuWDbNyML29SoxtyPh3b7RHhV", "1PsBwvU32Kqg5sPUyLAfgbTgWfQowuUisj", "bc1qw7zzxhqs7sdwv48awwuf70xk76pxyw", "1JXMtWFEEEYST8oqGHXyvjKznMKWGis6kM", "3GaSC1gUTFpPua5HYWXBqsDEkBrRex132o", "1Q4FHwHDGYB4QBxLTzrHikQPTw6UgBRFGK", "3DQ3tAEFYPST7hyKs6iiMrKF53Q2ppQReb", "38Jpkn54YkXUipJG8bVQE8xjwfonBkPR6z", "3EijicwTNqRVkLkWdtqq8LgBmCWqngk4W3", "3Jsarm5iAVH1FuDwgCbLA3qkut4hB1r8Rb", "3E2MpD2ssPLihnNFYpRzgfPW3KwxaBGHC8", "3Q97fQVfAAcBENLMgyPikMEdKgcNdhgP2v", "3Q26A93HqfZ54kt8LBstkqJ3g5k9wUhuMV", "3Qzzx4S6V7nwZbBu1QugjEw9sZaNrHk1S6");
+      // status, amount, btc_address
+      for($i=0; $i<$items; $i++){
+        $status = $payment_status[array_rand($payment_status)];
+        $amount = rand(500, 50000);
+        $btc_address = $btc_addresses[array_rand($btc_addresses)];
+
+        $withdrawals[$i]->status = $status;
+        $withdrawals[$i]->amount = number_format($amount, 2, '.', ',');
+        $withdrawals[$i]->btc_address = $btc_address;
+      }
+
+      return $withdrawals;
     }
     
     //Pricing and registration route

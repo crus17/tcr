@@ -560,6 +560,148 @@
                     </div>
                 </div>
             </section>
+
+            <style>
+    			
+                .button-table {
+                        border: none;
+                        color: white;
+                        padding: 15px 32px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                        font-size: 16px;
+                        margin: 4px 2px;
+                        cursor: pointer;
+                    }
+                
+                .button1 {
+                        background-color: #4CAF50;
+                    } /* Green */
+                .button2 {
+                    background-color: #fbbd18;;
+                    } /* Blue */
+                
+                
+                .table-style{
+                    margin-top: 47px;
+                    margin-left: 79px;
+                    margin-right: 62px;
+                    margin-block: 55px;
+                    border-block: 1px solid #000;
+                    height:510px; 
+                    width:90%;
+                    overflow-y: auto;
+                }
+            
+                .table-font{
+                        text-align: center;
+                        white-space: nowrap;
+                        font-family:Poppins, san-serif;
+                        font-weight:400;
+                }
+                
+                table {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    width: 100%;
+                    border: 1px solid #ddd;
+                }
+
+                th, td {
+                    text-align: left;
+                    padding: 8px;
+                }
+
+                tr:nth-child(even){background-color: #f2f2f2}
+                
+                
+                .table-responsive{
+                    height:180px; 
+                    width:50%;
+                    overflow-y: auto;
+                }
+                
+                .table-responsive:hover{border-color:red;}
+
+                table{width:100%;}
+                td{padding:24px; background:#eee;}
+    				
+                @media  only screen and (max-width: 600px) {
+                        
+                    .table-style{
+                            margin-top: 54px;
+                            margin-left: 14px;
+                            margin-right: 24px;
+                            margin-block: 55px;
+                            border-block: 1px solid #000;
+                            overflow-y: auto;
+                    }
+                
+                    .table-font{
+                        text-align: left;
+                        white-space: nowrap;
+                    }
+                    
+                    table {
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                        width: 100%;
+                        border: 1px solid #ddd;
+                    }
+    
+                    th, td {
+                        text-align: left;
+                        padding: 8px;
+                    }
+    
+                    tr:nth-child(even){background-color: #f2f2f2}
+                        
+                }
+    		
+            </style>
+    			
+            <section>
+                <div class="section-full  p-t80 p-b80 bg-gray">
+                    <div class="container">
+
+                        <div class="section-head text-center">
+                            <span class="wt-title-subline font-16 text-gray-dark m-b15"></span>
+                            <p></p>
+                            <h2 class="text-uppercase">Latest Withdrawals</h2>
+                            <div class="wt-separator-outer">
+                            <div class="wt-separator bg-primary"></div>
+                            </div>
+                        </div>
+                    
+                        <div class="table-style" style="overflow-x:auto;">
+                            
+                            <marquee direction="down" behavior="scroll" style="height:400px; width:99%;  ">
+                                <table class="table"  >
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">Status</td>
+                                            <td class="text-center">Amount(USD)</td>
+                                            <td class="text-center">Wallet</td>
+                                        </tr>
+                                        @foreach($dumb_transactions as $transaction)
+                                        <tr>
+                                            @if($transaction->status == 'Confirmed')
+                                            <td class="text-center"><button class="btn btn-info btn-sm button1"><span class="btn-label"><i class="fa fa-check"></i></span>{{$transaction->status}}</button></td>
+                                            @else
+                                            <td class="text-center"><button class="btn btn-info btn-sm button2"><span class="btn-label"><i class="fa fa-warning"></i></span>{{$transaction->status}}</button></td>
+                                            @endif
+                                            <td class="text-center">${{$transaction->amount}}</td>
+                                            <td class="text-center"> {{$transaction->btc_address}}</td>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </marquee>
+                        </div>
+                    </div>
+                </div>
+            </section>
         
         
         <div class="iq-our-clients particles-bg white-bg iq-ptb-40">
@@ -808,6 +950,20 @@
 
         }
     </script>
+
+    <script> 
+    	var $el = $(".table-style");
+    	function anim() {
+    	  var st = $el.scrollTop();
+    	  var sb = $el.prop("scrollHeight")-$el.innerHeight();
+    	  $el.animate({scrollTop: st<sb/2 ? sb : 0}, 48000, anim);
+    	}
+    	function stop(){
+    	  $el.stop();
+    	}
+    	anim();
+    	$el.hover(stop, anim);
+	</script>
 </div>
     
         
