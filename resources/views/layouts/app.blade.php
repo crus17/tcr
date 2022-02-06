@@ -31,6 +31,8 @@ if (Auth::check() && Auth::user()->dashboard_style == "light") {
 	<link rel="stylesheet" href="{{asset('dash/css/atlantis.min.css')}}">
 	<link rel="stylesheet" href="{{asset('dash/css/customs.css')}}">
 	<link rel="stylesheet" href="{{asset('dash/css/style.css')}}">
+	<link rel="stylesheet" href="{{asset('dash/simple-notify.min.css')}}">
+
 	<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.21/af-2.3.5/b-1.6.3/b-flash-1.6.3/b-html5-1.6.3/b-print-1.6.3/r-2.2.5/datatables.min.css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
@@ -100,6 +102,9 @@ if (Auth::check() && Auth::user()->dashboard_style == "light") {
 	<!-- Atlantis JS -->
 	<script src="{{asset('dash/js/atlantis.min.js')}}"></script>
 	<script src="{{asset('dash/js/atlantis.js')}}"></script>
+
+	<script src="{{asset('dash/simple-notify.min.js')}}"></script>
+
 	<script type="text/javascript">
 		var badWords = [ 
 			'<!--Start of Tawk.to Script-->',

@@ -13,7 +13,7 @@
                             <div>
                                 <a href="{{url('/')}}">
                                   <!--<span style="color:#04b9f4;font-size:30px;" class="w3-hide-large"><img src="{{ asset ('temp_new/images/log.png')}}">{{$settings->site_name}}</span>-->
-                                  <span style="color:#04b9f4;font-size:30px;" class="w3-hide-large"><img src="{{ asset ('temp/img/logo_dark.png')}}" width="320"></span>
+                                  <span style="color:#04b9f4;font-size:30px;" class="w3-hide-large"><img src="{{ asset ('zenith/images/logo-white.png')}}" width="320"></span>
                                 </a>
                             </div>
                             <!-- Logo Ends -->

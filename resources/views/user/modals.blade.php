@@ -12,7 +12,7 @@
 					  <button type="button" class="close text-{{$text}}" data-dismiss="modal">&times;</button>
 					</div>
 					<div class="modal-body bg-{{$bg}}">
-						  <form style="padding:3px;" role="form" method="post" action="{{action('SomeController@deposit')}}">
+						  <form style="padding:3px;" role="form" method="post" action="{{action('SomeController@deposit')}}" autocomplete="off">
 								 <input style="padding:5px;" class="form-control text-{{$text}} bg-{{$bg}}" placeholder="Enter amount here" type="text" name="amount" required><br/>
 								 
 								 <input type="hidden" name="_token" value="{{ csrf_token() }}">
