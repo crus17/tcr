@@ -635,6 +635,9 @@ public function ref(Request $request, $id){
                 }elseif($dplan->increment_interval=="Hourly"){
                   $togrow=\Carbon\Carbon::now()->subHours(1)->toDateTimeString();
                   $dtme = $plan->last_growth->diffInHours();
+                }elseif($dplan->increment_interval=="Minute"){
+                  $togrow=\Carbon\Carbon::now()->subMinutes(1)->toDateTimeString();
+                  $dtme = $plan->last_growth->diffMinutes();
                 }
                 
                 //expiration

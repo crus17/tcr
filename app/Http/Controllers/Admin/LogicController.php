@@ -134,7 +134,7 @@ class LogicController extends Controller
           //send email notification
           $value = number_format($request->amount);
           $objDemo = new \stdClass();
-          $objDemo->message = "You have just earned $settings->currency$value $settings->s_currency $message_type on your live $settings->site_name Account.";
+          $objDemo->message = "You have just earned $value $settings->s_currency $message_type on your live $settings->site_name Account.";
           $objDemo->sender = $settings->site_name;
           $objDemo->date = \Carbon\Carbon::Now();
           $objDemo->subject ="Credit Notification";

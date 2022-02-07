@@ -114,10 +114,9 @@ if (Auth::user()->dashboard_style == "light") {
                                                 <p class="card-category">Deposited</p>
                                                 <?php $__currentLoopData = $deposited; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $deposited): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <?php if(!empty($deposited->count)): ?>
-                                                <?php echo e($settings->currency); ?><?php echo e($deposited->count); ?>
-
+                                                <h4 class="card-title text-<?php echo e($text); ?>"><?php echo e($settings->currency); ?><?php echo e(number_format($deposited->count, 2, '.', ',')); ?></h4>
                                                 <?php else: ?>
-                                                <?php echo e($settings->currency); ?>0.00
+                                                <h4 class="card-title text-<?php echo e($text); ?>"><?php echo e($settings->currency); ?><?php echo e(number_format($deposited->count, 2, '.', ',')); ?></h4>
                                                 <?php endif; ?>
                                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                             </div>

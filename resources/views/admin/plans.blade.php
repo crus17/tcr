@@ -104,6 +104,7 @@ if (Auth('admin')->User()->dashboard_style == "light") {
 													<option>Two Weeks</option>
 													<option>Daily</option>
 													<option>Hourly</option>
+													<option>Minute</option>
 												</select><br>
 												<h5 class="text-{{$text}}">Top Up Type</h5> 
 												<select class="form-control text-{{$text}} bg-{{Auth('admin')->User()->dashboard_style}}" name="t_type">

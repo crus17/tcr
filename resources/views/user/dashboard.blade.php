@@ -111,9 +111,9 @@ if (Auth::user()->dashboard_style == "light") {
                                                 <p class="card-category">Deposited</p>
                                                 @foreach($deposited as $deposited)
                                                 @if(!empty($deposited->count))
-                                                {{$settings->currency}}{{$deposited->count}}
+                                                <h4 class="card-title text-{{$text}}">{{$settings->currency}}{{ number_format($deposited->count, 2, '.', ',')}}</h4>
                                                 @else
-                                                {{$settings->currency}}0.00
+                                                <h4 class="card-title text-{{$text}}">{{$settings->currency}}{{ number_format($deposited->count, 2, '.', ',')}}</h4>
                                                 @endif
                                                 @endforeach
                                             </div>
