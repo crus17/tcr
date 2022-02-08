@@ -115,14 +115,13 @@
                         <p>Front-end control</p>
                     </a>
                 </li>
-                
+                <?php endif; ?>
                 <li class="nav-item">
                     <a href="<?php echo e(url('/admin/dashboard/settings')); ?>">
                         <i class=" fa fa-cog" aria-hidden="true"></i>
                         <p>Settings</p>
                     </a>
                 </li>
-                <?php endif; ?>
             </ul>
         </div>
     </div>

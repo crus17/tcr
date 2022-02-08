@@ -98,7 +98,7 @@
                                         <li><a href="login">Login/Join</a></li> 
                                         <li><a href="javascript:void(0)">Company</a>
                                         <ul class="sub-menu">
-                                            <li><a href="contact">About Us</a></li>
+                                            <li><a href="about">About Us</a></li>
                                             <li><a href="contact">Contact Us</a></li>
                                         </ul>
                                     </li>
@@ -975,7 +975,7 @@
     <div id="capitol-callback">
         <div class="cpt-circle"></div>
         <div class="cpt-circle-fill"></div>
-        <a href="https://api.whatsapp.com/send?phone=+12064269848&text=<?php echo e($settings->site_name); ?>" id="WhatsAppBtnDesktop" target="_blank" class="main-button" lang="en">
+        <a href="https://api.whatsapp.com/send?phone=<?php echo e($settings->whatsapp); ?>&text=<?php echo e($settings->site_name); ?>" id="WhatsAppBtnDesktop" target="_blank" class="main-button" lang="en">
             <img src="https://nhtagent.com/nht-upload/assets/javascripts/WhatsApp/WhatsApp.png" width="100%">
         </a>
     </div>

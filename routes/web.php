@@ -125,6 +125,7 @@ Route::group(['prefix' => 'admin',  'middleware' => 'isadmin'], function()
 	// Settings Update Routes
 	Route::post('dashboard/updatecpd', 'Admin\SettingsController@updatecpd');
 	Route::post('dashboard/updatesettings', 'Admin\SettingsController@updatesettings');
+	Route::post('dashboard/updatebasicsettings', 'Admin\SettingsController@updatebasicsettings');
 	Route::post('dashboard/updatepreference', 'Admin\SettingsController@updatepreference');
 	Route::post('dashboard/updatewebinfo', 'Admin\SettingsController@updatewebinfo');
 	Route::post('dashboard/updatebot', 'Admin\SettingsController@updatebot');

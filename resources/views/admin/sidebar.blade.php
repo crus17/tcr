@@ -114,14 +114,13 @@
                         <p>Front-end control</p>
                     </a>
                 </li>
-                
+                @endif
                 <li class="nav-item">
                     <a href="{{ url('/admin/dashboard/settings') }}">
                         <i class=" fa fa-cog" aria-hidden="true"></i>
                         <p>Settings</p>
                     </a>
                 </li>
-                @endif
             </ul>
         </div>
     </div>

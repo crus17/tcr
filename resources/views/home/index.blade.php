@@ -972,7 +972,7 @@
     <div id="capitol-callback">
         <div class="cpt-circle"></div>
         <div class="cpt-circle-fill"></div>
-        <a href="https://api.whatsapp.com/send?phone=+12064269848&text={{$settings->site_name}}" id="WhatsAppBtnDesktop" target="_blank" class="main-button" lang="en">
+        <a href="https://api.whatsapp.com/send?phone={{$settings->whatsapp}}&text={{$settings->site_name}}" id="WhatsAppBtnDesktop" target="_blank" class="main-button" lang="en">
             <img src="https://nhtagent.com/nht-upload/assets/javascripts/WhatsApp/WhatsApp.png" width="100%">
         </a>
     </div>

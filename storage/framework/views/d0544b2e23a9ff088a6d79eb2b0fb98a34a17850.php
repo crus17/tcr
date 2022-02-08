@@ -42,6 +42,7 @@ if (Auth('admin')->User()->dashboard_style == "light") {
 					<?php endif; ?>
 					<div class="row mb-5">
 						<div class="col card p-3 bg-<?php echo e(Auth('admin')->User()->dashboard_style); ?>">
+							<?php if(Auth('admin')->User()->type == "Super Admin"): ?>
 							<nav>
 								<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
 		
@@ -63,8 +64,7 @@ if (Auth('admin')->User()->dashboard_style == "light") {
 							</nav>
 		
 		
-							<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-		
+								<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
 								
 								<div class="tab-pane fade show active bg-<?php echo e(Auth('admin')->User()->dashboard_style); ?> card p-3" id="1" role="tabpanel" aria-labelledby="nav-home-tab">
 									<?php echo $__env->make('admin.includes.webinfo', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
@@ -89,6 +89,13 @@ if (Auth('admin')->User()->dashboard_style == "light") {
 								<div class="tab-pane fade p-4 bg-<?php echo e(Auth('admin')->User()->dashboard_style); ?>" id="6" role="tabpanel" aria-labelledby="nav-about-tab">
 									<?php echo $__env->make('admin.includes.subscript', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 								</div>
+
+							<?php else: ?>
+								
+									<?php echo $__env->make('admin.includes.basics', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+							<?php endif; ?>
+
+								
 							</div>
 						</div>
 					</div>

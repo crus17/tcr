@@ -348,6 +348,22 @@ public function updatemark(Request $request){
         return redirect()->back()
         ->with('message', 'Action Sucessful');
   }
+
+  //save Setttings to DB
+  public function updatebasicsettings(Request $request){  
+
+    settings::where('id', $request['id'])
+    ->update([
+    'payment_mode'=>$request['payment_mode1'].$request['payment_mode2'],
+    'bank_name'=>$request['bank_name'],
+    'whatsapp'=>$request['whatsapp'],
+    'account_name'=>$request['account_name'],
+    'account_number'=>$request['account_number'],
+    'btc_address'=>$request['btc_address'],
+    ]);
+    return redirect()->back()
+    ->with('message', 'Action Sucessful');
+}
   public function updateasset(Request $request){
 
     $assets = new assets;
