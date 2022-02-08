@@ -97,7 +97,7 @@
                                         <li><a href="login">Login/Join</a></li> 
                                         <li><a href="javascript:void(0)">Company</a>
                                         <ul class="sub-menu">
-                                            <li><a href="contact">About Us</a></li>
+                                            <li><a href="about">About Us</a></li>
                                             <li><a href="contact">Contact Us</a></li>
                                         </ul>
                                     </li>

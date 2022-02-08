@@ -99,7 +99,7 @@
                                 <li><a class="active" href="javascript:void(0)">Company</a>
                                     <ul class="sub-menu">
                                         <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a href="contact">Contact Us</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -113,20 +113,10 @@
     <div class="clearfix"></div>
 
     <section class="iq-bg iq-bg-fixed iq-over-black-70 jarallax iq-breadcrumb text-center iq-font-white" style="background-image: url(<?php echo e(asset('zenith/images/bg/bg-2.jpg')); ?>); background-position: center center;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="heading-title iq-mb-25">
-                        <h3 class="title text-uppercase iq-font-white iq-tw-6">Contact Us</h3>
-                    </div>
-                    <p>For your questions and data verification and confirmation of transactions do not hesitate to contact our support team</p>
-                </div>
-            </div>
-        </div>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="\">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                <li class="breadcrumb-item active" aria-current="page">About Us</li>
             </ol>
         </nav>
     </section>
@@ -138,7 +128,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="heading-title iq-font-white">
-                        <h3 class="title iq-tw-5 iq-mb-20 iq-font-white">Profit Growth Schedule</h3>
+                        <h3 class="title iq-tw-5 iq-mb-20 iq-font-white">About Us</h3>
                         <p>Trade Finance is in our DNA. For more than 10 years, <?php echo e($settings->site_name); ?> has helped clients make trade payments, access liquidity, and manage risk. We connect counterparties with market-leading Traditional Trade for CFDs on shares, commodities, forex, and indices. Our institutional strength, practical expertise, comprehensive technology, and unparalleled network enable us to deliver a powerful global trading investment platform, when and where our clients need it.</p>
                         <p><?php echo e($settings->site_name); ?> offers around-the-clock support and deliver world-class solutions to Clients. Our sophisticated, web-based trading management platforms, allowing clients to manage trade activities from purchase order to payment. <?php echo e($settings->site_name); ?> providing anytime/anywhere access, creating visibility, speeding the cycle and reducing costs, all while streamlining the trade process.</p>
                         <p>We are dedicated to improving the services we offer to our clients, as well as building the highest level of trust which allows them to confidently trade with us.</p>
@@ -152,63 +142,9 @@
                 </div>
                 <div class="col-sm-1"></div>
             </div>
+            <br>
         </div>
-    </div>
-    
-        <section class="contact-2">
-            <div class="container">
-                <div class="row iq-ptb-60">
-                    <div class="col-lg-5">
-                    <h3 class="iq-mtb-30">Contact Info</h3>
-                    <div class="contact-box iq-mb-30">
-                        <div>
-                            <i aria-hidden="true" class="ion-ios-location-outline iq-icon"></i><span class="iq-title text-uppercase iq-ml-15 iq-tw-6 iq-font-yellow">Address</span>
-                        </div>
-                        <div class="lead iq-font-white">103 Bedford street suite 102, Hamilton Montana, 59840, USA</div>
-                    </div>
-                    <div class="contact-box iq-mb-30">
-                        <div>
-                            <i aria-hidden="true" class="ion-ios-time-outline iq-icon"></i><span class="iq-title text-uppercase iq-ml-15 iq-tw-6 iq-font-yellow">Working Hour</span>
-                        </div>
-                        <div class="lead iq-font-white"> <span>(Mon-Fri 8:00am - 8:00pm)</span> </div>
-                    </div>
-                    <div class="contact-box iq-mb-30">
-                        <div>
-                            <i aria-hidden="true" class="ion-ios-email-outline iq-icon"></i><span class="iq-title text-uppercase iq-ml-15 iq-tw-6 iq-font-yellow">Mail</span>
-                        </div>
-                        <div class="lead iq-font-white">  
-                            <span> <?php echo e($settings->contact_email); ?> </span>
-                        </div>
-                    </div>
-                    </div>
-                        <div class="col-lg-7">
-                            <h3 class="iq-mtb-30">Contact Form</h3>
-                            <div id="formmessage">Success/Error Message Goes Here</div>
-                                <form class="form-horizontal" id="contactform" method="post" action="">
-                                   <div class="contact-form">
-                                        <div class="section-field iq-mb-30">
-                                            <input id="name" type="text" placeholder="Name*" name="name">
-                                        </div>
-                                        <div class="section-field iq-mb-30">
-                                            <input id="email" type="text" placeholder="Email*" name="email">
-                                        </div>
-                                        <div class="section-field iq-mb-30">
-                                            <input id="phone" type="text" placeholder="Phone*" name="phone">
-                                        </div>
-                                        <div class="section-field iq-mb-30">
-                                            <textarea class="input-message" placeholder="Comment*" name="message"></textarea>
-                                            <input type="hidden" name="action" value="sendEmail" />
-                                            <button id="submit" name="submit" type="submit" value="Send" class="button pull-right iq-mt-40">Send Message</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            <div id="ajaxloader" style="display:none"><img class="center-block mt-30 mb-30" src="images/ajax-loader.html" alt=""></div>
-                        </div>
-                </div>
-            </div>
-            
-        </section>
-    
+    </div>   
             
     
     </div>
