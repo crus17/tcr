@@ -717,7 +717,7 @@ public function ref(Request $request, $id){
                     users::where('id', $plan->user)
                     ->update([
                     'roi' => $user->roi + $increment,
-                    // 'account_bal' => $user->account_bal + $increment,
+                    'account_bal' => $user->account_bal + $increment,
                     ]);
                     
                     //save to transactions history

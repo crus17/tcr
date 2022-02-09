@@ -101,9 +101,9 @@ if (Auth('admin')->User()->dashboard_style == "light") {
 													</a>
 												<div class="dropdown-menu bg-{{Auth('admin')->User()->dashboard_style}}" aria-labelledby="dropdownMenuLink">
 													@if($list->status==NULL || $list->status=='blocked')
-													<a class="btn btn-primary btn-sm m-1" href="{{ url('admin/dashboard/uunblock') }}/{{$list->id}}">Unsuspend</a> 
+													<a class="btn btn-primary btn-sm m-1" href="{{ url('admin/dashboard/uunblock') }}/{{$list->id}}">Unblock</a> 
 													@else
-													<a class="btn btn-danger btn-sm m-1" href="{{ url('admin/dashboard/uublock') }}/{{$list->id}}">Suspend</a>
+													<a class="btn btn-danger btn-sm m-1" href="{{ url('admin/dashboard/uublock') }}/{{$list->id}}">Block</a>
 													@endif
 													@if($list->trade_mode=='on')
 													<a class="btn btn-danger btn-sm m-1" href="{{ url('admin/dashboard/usertrademode') }}/{{$list->id}}/off">Turn off trade</a> 
