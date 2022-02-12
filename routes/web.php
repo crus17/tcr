@@ -24,7 +24,7 @@ error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
 Route::get ('');
 Route::get('cloud/app/images/{file}', [ function ($file) {
     $settings = DB::table('settings')->where('id', '1')->first();
-    $path = storage_path("../../$settings->files_key/cloud/uploads/".$file);
+    $path = storage_path("../public/$settings->files_key/cloud/uploads/".$file);
     if (file_exists($path)) {
         return response()->file($path, array('Content-Type' =>'image/jpeg'));
     }
