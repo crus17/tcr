@@ -97,7 +97,7 @@
                                 <li><a href="login">Login/Join</a></li>
                                 <li><a class="active" href="javascript:void(0)">Company</a>
                                     <ul class="sub-menu">
-                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="about">About Us</a></li>
                                         <li><a href="#">Contact Us</a></li>
                                     </ul>
                                 </li>
@@ -228,6 +228,7 @@
                                     <div class="content ">
                                         <div class="iq-tw-6 title ">Mail</div> 
                                         {{$settings->contact_email}}
+                                        {{$settings->contact_email_2}}
                                     </div>
                                  </div>
                             </div>
@@ -298,7 +299,7 @@
     
     <script src="{{ asset('zenith/js/custom.js') }}"></script>
     
-    <!--<script src="{{ asset('zenith/js/tawkto.js') }}"></script>-->
+    <script src="//code.tidio.co/xnlracp74qfkqqn7ya1wunc3uwbnzrcc.js" async></script>
         
 </body>
 

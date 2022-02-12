@@ -132,28 +132,6 @@
     </section>
 
     <div class="main-content">
-
-    <div class="overview-block-pt iq-feature4 iq-bg iq-over-black-80 jarallax particles-bg" style="background-image: url(<?php echo e(asset('zenith/images/bg/bg-7.jpg')); ?>); background-position: center center;">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="heading-title iq-font-white">
-                        <h3 class="title iq-tw-5 iq-mb-20 iq-font-white">Profit Growth Schedule</h3>
-                        <p>Trade Finance is in our DNA. For more than 10 years, <?php echo e($settings->site_name); ?> has helped clients make trade payments, access liquidity, and manage risk. We connect counterparties with market-leading Traditional Trade for CFDs on shares, commodities, forex, and indices. Our institutional strength, practical expertise, comprehensive technology, and unparalleled network enable us to deliver a powerful global trading investment platform, when and where our clients need it.</p>
-                        <p><?php echo e($settings->site_name); ?> offers around-the-clock support and deliver world-class solutions to Clients. Our sophisticated, web-based trading management platforms, allowing clients to manage trade activities from purchase order to payment. <?php echo e($settings->site_name); ?> providing anytime/anywhere access, creating visibility, speeding the cycle and reducing costs, all while streamlining the trade process.</p>
-                        <p>We are dedicated to improving the services we offer to our clients, as well as building the highest level of trust which allows them to confidently trade with us.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-1"></div>
-                <div class="col-sm-10">
-                    <img class="img-fluid" src="<?php echo e(asset('zenith/images/about-us/cert.png')); ?>" alt="#">
-                </div>
-                <div class="col-sm-1"></div>
-            </div>
-        </div>
-    </div>
     
         <section class="contact-2">
             <div class="container">
@@ -322,7 +300,7 @@
     
     <script src="<?php echo e(asset('zenith/js/custom.js')); ?>"></script>
     
-    <!--<script src="<?php echo e(asset('zenith/js/tawkto.js')); ?>"></script>-->
+    <script src="//code.tidio.co/xnlracp74qfkqqn7ya1wunc3uwbnzrcc.js" async></script>
         
 </body>
 

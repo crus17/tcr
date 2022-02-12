@@ -137,8 +137,8 @@
                                 <?php echo e($settings->site_name); ?> bot is a trading platform that pays his investors 100% daily for 30days.&nbsp;<br>There are different investment options for our investors which carry different bonus offers after one investment circle.<br>We are here to help you trade and lead you to financial freedom.
                             </div>
                     
-                            <a href="register" class="tp-caption rev-btn button" id="slide-5-layer-7" data-x="30" data-y="540" data-width="['auto']" data-height="['auto']" data-type="button" data-responsive_offset="on" data-frames='[{"delay":1500,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":""}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[1,1,1,1]" data-paddingright="[30,30,30,30]" data-paddingbottom="[1,1,1,1]" data-paddingleft="[30,30,30,30]" style="">Sign Up</a>
-                            <a href="login" class="tp-caption rev-btn button" id="slide-5-layer-7" data-x="160" data-y="540" data-width="['auto']" data-height="['auto']" data-type="button" data-responsive_offset="on" data-frames='[{"delay":1500,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":""}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[1,1,1,1]" data-paddingright="[30,30,30,30]" data-paddingbottom="[1,1,1,1]" data-paddingleft="[30,30,30,30]" style="">Login</a>
+                            <a href="login" class="tp-caption rev-btn button" id="slide-5-layer-7" data-x="30" data-y="540" data-width="['auto']" data-height="['auto']" data-type="button" data-responsive_offset="on" data-frames='[{"delay":1500,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":""}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[1,1,1,1]" data-paddingright="[30,30,30,30]" data-paddingbottom="[1,1,1,1]" data-paddingleft="[30,30,30,30]" style="">Login</a>
+                            <a href="register" class="tp-caption rev-btn button" id="slide-5-layer-7" data-x="160" data-y="540" data-width="['auto']" data-height="['auto']" data-type="button" data-responsive_offset="on" data-frames='[{"delay":1500,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":""}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[1,1,1,1]" data-paddingright="[30,30,30,30]" data-paddingbottom="[1,1,1,1]" data-paddingleft="[30,30,30,30]" style="">Sign Up</a>
                         </li>
                     
                         <li data-index="rs-8" data-transition="random-static,random-premium,random" data-slotamount="default,default,default,default" data-hideafterloop="0" data-hideslideonmobile="off" data-randomtransition="on" data-easein="default,default,default,default" data-easeout="default,default,default,default" data-masterspeed="600,default,default,default" data-thumb="" data-rotate="0,0,0,0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -767,7 +767,8 @@
                                         <div class="iq-tw-6 title ">Mail</div> 
                                         <?php echo e($settings->contact_email); ?>
 
-                                        <!--<a href="<?php echo e(asset('zenith/cdn-cgi/l/email-protection')); ?>" class="__cf_email__" data-cfemail="9efffaf3f7f0defcf7eafdf1f7f0fbe6eefbeceaf2eafab0fdf1f3">[email&#160;protected]</a>-->
+                                        <?php echo e($settings->contact_email_2); ?>
+
                                     </div>
                                 </div>
                             </div>
@@ -982,7 +983,7 @@
             <img src="https://nhtagent.com/nht-upload/assets/javascripts/WhatsApp/WhatsApp.png" width="100%">
         </a>
     </div>
-    <script src="//code.tidio.co/ktekcgr1gatrbal5adto7szp8andzct4.js" async></script>
+    <script src="//code.tidio.co/xnlracp74qfkqqn7ya1wunc3uwbnzrcc.js" async></script>
     
 
 </html>

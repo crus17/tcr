@@ -67,7 +67,6 @@
                                 <li class="list-inline-item"><i class="fa fa-envelope-o text-blue"></i>
                                     <?php echo e($settings->contact_email); ?>
 
-                                    <!--<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5b32353d341b39322f383432353e232b3e292f372f3f75383436">[email&#160;protected]</a></li>-->
                             </ul>
                         </div>
                     </div>
@@ -188,6 +187,8 @@
                                         <div class="iq-tw-6 title ">Mail</div> 
                                         <?php echo e($settings->contact_email); ?>
 
+                                        <?php echo e($settings->contact_email_2); ?>
+
                                     </div>
                                  </div>
                             </div>
@@ -256,9 +257,10 @@
     
     <script src="<?php echo e(asset('zenith/js/style-customizer.js')); ?>"></script>
     
-    <script src="<?php echo e(asset('zenith/js/custom.js')); ?>"></script>
+    <script src="<?php echo e(asset('zenith/js/custom.js')); ?>"></script>    
+
+    <script src="//code.tidio.co/xnlracp74qfkqqn7ya1wunc3uwbnzrcc.js" async></script>
     
-    <!--<script src="<?php echo e(asset('zenith/js/tawkto.js')); ?>"></script>-->
         
 </body>
 

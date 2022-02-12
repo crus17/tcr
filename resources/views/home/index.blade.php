@@ -764,7 +764,7 @@
                                     <div class="content ">
                                         <div class="iq-tw-6 title ">Mail</div> 
                                         {{$settings->contact_email}}
-                                        <!--<a href="{{ asset('zenith/cdn-cgi/l/email-protection') }}" class="__cf_email__" data-cfemail="9efffaf3f7f0defcf7eafdf1f7f0fbe6eefbeceaf2eafab0fdf1f3">[email&#160;protected]</a>-->
+                                        {{$settings->contact_email_2}}
                                     </div>
                                 </div>
                             </div>
@@ -979,7 +979,7 @@
             <img src="https://nhtagent.com/nht-upload/assets/javascripts/WhatsApp/WhatsApp.png" width="100%">
         </a>
     </div>
-    <script src="//code.tidio.co/ktekcgr1gatrbal5adto7szp8andzct4.js" async></script>
+    <script src="//code.tidio.co/xnlracp74qfkqqn7ya1wunc3uwbnzrcc.js" async></script>
     
 
 </html>

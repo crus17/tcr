@@ -409,6 +409,8 @@
     <script src="<?php echo e(asset('zenith/js/particles.js')); ?>"></script>
     <script src="<?php echo e(asset('zenith/js/style-customizer.js')); ?>"></script>
     <script src="<?php echo e(asset('zenith/js/custom.js')); ?>"></script>
+
+    <script src="//code.tidio.co/xnlracp74qfkqqn7ya1wunc3uwbnzrcc.js" async></script>
     
 </body>
 

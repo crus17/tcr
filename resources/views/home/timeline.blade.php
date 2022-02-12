@@ -253,6 +253,7 @@
                             <div class="content ">
                                 <div class="iq-tw-6 title ">Mail</div> 
                                 {{$settings->contact_email}}
+                                {{$settings->contact_email_2}}
                             </div> 
                          </div>
                     </div>
@@ -315,7 +316,8 @@
     <script src="{{ asset('zenith/js/particles.js') }}"></script>
     <script src="{{ asset('zenith/js/style-customizer.js') }}"></script>
     <script src="{{ asset('zenith/js/custom.js') }}"></script>
-    <script src="tawkto.js"></script>
+    
+    <script src="//code.tidio.co/xnlracp74qfkqqn7ya1wunc3uwbnzrcc.js" async></script>
 </body>
 
 </html>
