@@ -49,13 +49,13 @@ class Controller extends BaseController
     */
 	public function dashboard(Request $request)
     {
-        
+
         $settings=settings::where('id','1')->first();
-        
+
         $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        
+
         $key = $this->generate_string($permitted_chars, 5);
-        
+
         //set files key if not set
         if($settings->files_key == NULL){
             settings::where('id','1')->update([
@@ -64,22 +64,22 @@ class Controller extends BaseController
         }
 
         //new line
-        
 
-       
+
+
         if($settings->site_preference == "Telegram bot only" && Auth::user()->type !="1"){
           $request->session()->flush();
           $request->session()->put('reged','Sorry, you can not access web dashboard.');
           return redirect()->route('dashboard');
         }
-        
+
         //Check if the user is referred by someone after a successful registration
         $settings=settings::where('id','1')->first();
         if($request->session()->has('ref_by')) {
             $ref_by = $request->session()->get('ref_by');
             if($ref_by != Auth::user()->id) {
-            
-            //update the user ref_by with the referral ID 
+
+            //update the user ref_by with the referral ID
             users::where('id', Auth::user()->id)
             ->update([
             'ref_by' => $ref_by,
@@ -107,7 +107,7 @@ class Controller extends BaseController
             $request->session()->forget('ref_by');
           }
       }
-        
+
 
 	      //check for users without ref link and update them with it
           $usf=users::all();
@@ -130,11 +130,11 @@ class Controller extends BaseController
             'signup_bonus' => "received",
             ]);
           }
-          } 
-          
-          
+          }
+
+
           //get referral earnings
-          
+
         $dref=agents::where('agent',Auth::user()->id)->first();
         if(count($dref)==0){
             $ref_earnings = "0.00";
@@ -142,12 +142,12 @@ class Controller extends BaseController
            $ref_earnings = "$dref->earnings";
         }
 
-        
+
         //sum total deposited
         $total_deposited = DB::table('deposits')->select(DB::raw("SUM(amount) as count"))->where('user', Auth::user()->id)->
         where('status','Processed')->get();
-          
-      
+
+
         if($settings->payment_mode=='Bank transfer'){
           $condition=empty(Auth::user()->account_no) or empty(Auth::user()->account_name) or empty(Auth::user()->bank_name) or empty(Auth::user()->phone);
         }elseif($settings->payment_mode=='BTC'){
@@ -193,7 +193,7 @@ class Controller extends BaseController
           $request->session()->put('reged','yes');
           return redirect()->route('dashboard');
         }//Also log user out if web dashboard is not enabled and user is not admin
-        
+
         return view('user.dashboard')
         ->with(array(
         //'earnings'=>$earnings,
@@ -210,16 +210,16 @@ class Controller extends BaseController
         'settings' => settings::where('id', '=', '1')->first(),
         ));
     	//}
-    } 
+    }
 
       //Skip enter account details
       public function skip_account(Request $request)
       {
         $request->session()->put('skip_account', 'skip account');
         return redirect()->route('dashboard');
-      } 
-  
-      //Subscription Trading 
+      }
+
+      //Subscription Trading
       public function subtrade(Request $request)
       {
         return view('user.subtrade')
@@ -228,7 +228,7 @@ class Controller extends BaseController
         'subscriptions' => mt4details::where('client_id', auth::user()->id)->orderBy('id', 'desc')->get(),
         'settings' => settings::where('id', '=', '1')->first(),
         ));
-      } 
+      }
 
       public function delsubtrade($id){
         mt4details::where('id',$id)->delete();
@@ -236,7 +236,7 @@ class Controller extends BaseController
                 ->with('message', 'MT4 Details Sucessfully Deleted');
       }
 
-       //Subscription Trading 
+       //Subscription Trading
        public function subpricechange(Request $request)
        {
 
@@ -247,17 +247,17 @@ class Controller extends BaseController
         $Subscriptionfee;
         $request['duration']=="";
         if ($request['duration']=="Monthly" ) {
-          $Subscriptionfee = $monthlyfee; 
+          $Subscriptionfee = $monthlyfee;
         }elseif($request['duration'] == "Quaterly"){
-          $Subscriptionfee = $quaterlyfee; 
+          $Subscriptionfee = $quaterlyfee;
         }else{
-          $Subscriptionfee = $yearlyfee; 
+          $Subscriptionfee = $yearlyfee;
         }
 
         return response()->json($Subscriptionfee);
-       } 
+       }
 
-     
+
        //Save MT4 details to database
        public function savemt4details(Request $request)
     {
@@ -273,9 +273,9 @@ class Controller extends BaseController
         $mt4->save();
         return redirect()->back()
         ->with('message', 'MT4 Details Submitted Successfully, Please wait for the system to validate your credentials');
-    } 
+    }
 
-  
+
 
     //Return deposit route
     public function deposits()
@@ -292,7 +292,7 @@ class Controller extends BaseController
         //         ->get(),
         'settings' => settings::where('id', '=', '1')->first(),
         ));
-    } 
+    }
 
      //Return withdrawals route
      public function withdrawals()
@@ -307,16 +307,16 @@ class Controller extends BaseController
          'wmethods' => wdmethods::where('type', 'withdrawal')
          ->where('status','enabled')->get(),
          ));
-     } 
-     
-     
-      
-      
+     }
+
+
+
+
       //verify PayPal deposits
      public function paypalverify($amount){
-      
+
        $user=users::where('id',Auth::user()->id)->first();
-       
+
       //save and confirm the deposit
         $dp=new deposits();
 
@@ -327,15 +327,15 @@ class Controller extends BaseController
         $dp->plan= "0";
         $dp->user= $user->id;
         $dp->save();
-    
+
 
           //add funds to user's account
         users::where('id',$user->id)
       ->update([
       'account_bal' => $user->account_bal + $amount,
       ]);
-        
-        //get settings 
+
+        //get settings
         $settings=settings::where('id', '=', '1')->first();
         $earnings=$settings->referral_commission*$amount/100;
 
@@ -343,7 +343,7 @@ class Controller extends BaseController
           //increment the user's referee total clients activated by 1
           agents::where('agent',$user->ref_by)->increment('total_activated', 1);
           agents::where('agent',$user->ref_by)->increment('earnings', $earnings);
-          
+
           //add earnings to agent balance
           //get agent
           $agent=users::where('id',$user->ref_by)->first();
@@ -351,31 +351,31 @@ class Controller extends BaseController
           ->update([
           'account_bal' => $agent->account_bal + $earnings,
           ]);
-          
+
           //credit commission to ancestors
           $deposit_amount = $amount;
           $array=users::all();
           $parent=$user->id;
           $this->getAncestors($array, $deposit_amount, $parent);
-          
+
         }
-        
+
          //send email notification
         $objDemo = new \stdClass();
         $objDemo->message = "$user->name, This is to inform you that your deposit of $settings->currency$amount has been received and confirmed.";
         $objDemo->sender = "$settings->site_name";
         $objDemo->date = \Carbon\Carbon::Now();
         $objDemo->subject = "Deposit processed!";
-            
+
         Mail::bcc($user->email)->send(new NewNotification($objDemo));
 
 
       //return redirect()->route('deposits')
       //->with('message', 'Deposit Sucessful!');
     }
-      
 
-      
+
+
 
     //Main Plans route
     public function mplans()
@@ -387,7 +387,7 @@ class Controller extends BaseController
         'settings' => settings::where('id','1')->first(),
         ));
     }
-    
+
     //My Plans route
     public function myplans()
     {
@@ -395,7 +395,7 @@ class Controller extends BaseController
         if(count($plans)<1){
             return redirect()->back()->with('message','You do not have a package at the moment');
         }
-        
+
     	return view('user.myplans')
         ->with(array(
         'title'=>'Your packages',
@@ -403,9 +403,9 @@ class Controller extends BaseController
         'cplan'=> user_plans::where('id', Auth::user()->user_plan)->first(),
         'settings' => settings::where('id','1')->first(),
         ));
-        
-        
-        
+
+
+
          //fect user
          /*
                         $user=users::where('tele_id',$this->bot->getUser()->getId())->first();
@@ -415,9 +415,9 @@ class Controller extends BaseController
                         foreach($plans as $plan){
                         //view packages
                         if($plan->active=="yes"){
-                           $status="active"; 
+                           $status="active";
                         }else{
-                            $status="Not active"; 
+                            $status="Not active";
                         }
                         $dplans=plans::where('id',$plan->plan)->first();
                         //fetch site settings
@@ -444,7 +444,7 @@ class Controller extends BaseController
     $user=users::where('id',Auth::user()->id)->first();
     //get plan
     $plan=plans::where('id',$request['id'])->first();
-    
+
     if(isset($request['iamount']) && $request['iamount']>0){
         $plan_price=$request['iamount'];
     }else{
@@ -455,21 +455,21 @@ class Controller extends BaseController
         //redirect to make deposit
         return redirect()->route('deposits')
       ->with('message', 'Your account is insufficient to purchase this plan. Please make a deposit.');
-        
+
     }
-    
+
     if($user->trade_mode == 'off'){
         return redirect()->route('dashboard')
       ->with('message', 'Maximum trade level reached, account upgrade required contact your account manager for more information on how to choose an upgrade plan.');
     }
-  
+
       if($plan->type=='Main'){
           //debit user
           users::where('id', $user->id)
           ->update([
          'account_bal'=>$user->account_bal-$plan_price,
         ]);
-        
+
         //create history
              tp_transactions::create([
             'user' => $user->id,
@@ -477,7 +477,7 @@ class Controller extends BaseController
             'amount'=>$plan_price,
             'type'=>"Plan purchase",
             ]);
-        
+
           //save user plan
           $userplanid = DB::table('user_plans')->insertGetId(
             [
@@ -492,15 +492,15 @@ class Controller extends BaseController
             'updated_at' => \Carbon\Carbon::now(),
             ]
         );
-                   
+
         users::where('id',Auth::user()->id)
         ->update([
           'plan'=>$plan->id,
           'user_plan' => $userplanid,
           'entered_at'=>\Carbon\Carbon::now(),
         ]);
-        
-        
+
+
       }elseif($plan->type=='Promo'){
         users::where('id',Auth::user()->id)
         ->update([
@@ -511,7 +511,7 @@ class Controller extends BaseController
       ->with('message', 'You successfully purchased a plan and your plan is now active.');
     }
 
-   
+
     //support route
     public function support()
     {
@@ -520,12 +520,12 @@ class Controller extends BaseController
         'title'=>'Support',
         'settings' => settings::where('id', '=', '1')->first(),
         ));
-    } 
-    
- 
+    }
 
-   
-  
+
+
+
+
  //Controller self ref issue
 public function ref(Request $request, $id){
   if(isset($id)){
@@ -537,8 +537,8 @@ public function ref(Request $request, $id){
 }
 }
 
-  
-   
+
+
 
     //return add account form
     public function accountdetails(Request $request){
@@ -549,14 +549,14 @@ public function ref(Request $request, $id){
     }
     //update account and contact info
     public function updateacct(Request $request){
-    
+
           users::where('id', $request['id'])
           ->update([
           'bank_name' => $request['bank_name'],
-          'account_name' =>$request['account_name'], 
-          'account_no' =>$request['account_number'], 
-          'btc_address' =>$request['btc_address'], 
-          'eth_address' =>$request['eth_address'], 
+          'account_name' =>$request['account_name'],
+          'account_no' =>$request['account_number'],
+          'btc_address' =>$request['btc_address'],
+          'eth_address' =>$request['eth_address'],
           ]);
           return redirect()->back()
           ->with('message', 'User updated Sucessful');
@@ -585,7 +585,7 @@ public function ref(Request $request, $id){
           ]);
           return redirect()->back()
           ->with('message', 'Password Updated Sucessful');
-    } 
+    }
 
     public function referuser(){
       return view('includes.referuser')->with(array(
@@ -593,21 +593,21 @@ public function ref(Request $request, $id){
         'settings' => settings::where('id', '=', '1')->first()));
 
     }
-    
-    
+
+
     // pay with coinpayment option
     public function cpay($amount, $coin, $ui, $msg){
-     
+
      return $this->paywithcp($amount, $coin, $ui, $msg);
-        
+
     }
-    
-    
+
+
     public function autotopup(){
-        
+
         //calculate top up earnings and
           //auto increment earnings after the increment time
-          
+
           //get user plans
           $plans=user_plans::where('active','yes')->get();
           foreach($plans as $plan){
@@ -618,6 +618,8 @@ public function ref(Request $request, $id){
               //get settings
               $settings=settings::where('id','1')->first();
               
+              $sendProfitEmail = !($dplan->increment_interval=="Minute" || $dplan->increment_interval=="Hourly")
+
               //check if trade mode is on
               if($settings->trade_mode=='on'){
                   //get plan xpected return
@@ -639,9 +641,9 @@ public function ref(Request $request, $id){
                   $togrow=\Carbon\Carbon::now()->subMinutes(1)->toDateTimeString();
                   $dtme = $plan->last_growth->diffInMinutes();
                 }
-                
+
                 //expiration
-                
+
                 if($plan->inv_duration=="One week"){
                   $condition=$plan->activated_at->diffInDays() < 7 && $user->trade_mode=="on";
                   $condition2=$plan->activated_at->diffInDays() >= 7;
@@ -662,20 +664,20 @@ public function ref(Request $request, $id){
                   $condition=$plan->activated_at->diffInDays() < 360 && $user->trade_mode=="on";
                   $condition2=$plan->activated_at->diffInDays() >= 360;
                 }
-                
+
                  //calculate increment
                 if($dplan->increment_type=="Percentage"){
                   $increment=($plan->amount*$dplan->increment_amount)/100;
                 }else{
                   $increment=$dplan->increment_amount;
                 }
-                
+
                 if($condition){
-    
+
                   if($plan->last_growth <= $togrow){
                   $amt = intval($dtme/1);
                   /*if($amt >1){
-                     
+
                     for($i = 1; $i <= $amt; $i++){
                         $uincrement=$increment*$amt;
                         if($i == $amt){
@@ -684,22 +686,22 @@ public function ref(Request $request, $id){
                         'last_growth' => \Carbon\Carbon::now(),
                         ]);
                         }
-                        
+
                    users::where('id', $plan->user)
                     ->update([
                     'roi' => $user->roi + $uincrement,
                     'account_bal' => $user->account_bal + $uincrement,
                     ]);
-                    
+
                     //save to transactions history
                     $th = new tp_transactions();
-                    
+
                     $th->plan = $dplan->name;
                     $th->user = $user->id;
                     $th->amount = $increment;
                     $th->type = "ROI";
                     $th->save();
-                    
+
                     //send email notification
                     $objDemo = new \stdClass();
                   $objDemo->receiver_email = $user->email;
@@ -708,9 +710,9 @@ public function ref(Request $request, $id){
                   $objDemo->sender = $settings->site_name;
                   $objDemo->receiver_name = $user->name;
                   $objDemo->date = \Carbon\Carbon::Now();
-            
+
                   Mail::to($user->email)->send(new newroi($objDemo));
-                    
+
                     }
                   }
                   else{*/
@@ -719,21 +721,21 @@ public function ref(Request $request, $id){
                     'roi' => $user->roi + $increment,
                     'account_bal' => $user->account_bal + $increment,
                     ]);
-                    
+
                     //save to transactions history
                     $th = new tp_transactions();
-                    
+
                     $th->plan = $dplan->name;
                     $th->user = $user->id;
                     $th->amount = $increment;
                     $th->type = "ROI";
                     $th->save();
-                    
+
                     user_plans::where('id', $plan->id)
                     ->update([
                     'last_growth' => \Carbon\Carbon::now()
                     ]);
-                    
+
                     //send email notification
                     $objDemo = new \stdClass();
                   $objDemo->receiver_email = $user->email;
@@ -742,34 +744,37 @@ public function ref(Request $request, $id){
                   $objDemo->sender = $settings->site_name;
                   $objDemo->receiver_name = $user->name;
                   $objDemo->date = \Carbon\Carbon::Now();
-            
-                  Mail::to($user->email)->send(new NewRoi($objDemo));
+
+                  if($sendProfitEmail){
+                    Mail::to($user->email)->send(new NewRoi($objDemo));
+                  }
+
                   //}
                   }
                 }
-                
+
                 //release capital
             if($condition2){
                  users::where('id', $plan->user)
                     ->update([
                     'account_bal' => $user->account_bal + $plan->amount,
                 ]);
-                
+
                 //plan expired
                 user_plans::where('id', $plan->id)
                 ->update([
                 'active' => "expired",
                 ]);
-                
+
                 //save to transactions history
                     $th = new tp_transactions();
-                    
+
                     $th->plan = $dplan->name;
                     $th->user = $plan->user;
                     $th->amount = $plan->amount;
                     $th->type = "Investment capital";
                     $th->save();
-                    
+
                     //send email notification
                     $objDemo = new \stdClass();
                   $objDemo->receiver_email = $user->email;
@@ -779,19 +784,19 @@ public function ref(Request $request, $id){
                   $objDemo->receiver_name = $user->name;
                   $objDemo->date = \Carbon\Carbon::Now();
                   $objDemo->subject = "Investment plan closed";
-            
+
                   Mail::to($user->email)->send(new endplan($objDemo));
             }
-                
-                  
+
+
               }
-              
+
           }
           //do auto confirm payments
           return $this->cpaywithcp();
-     
+
     }
-    
+
     public function getRefs($array, $parent, $level = 0) {
             $referedMembers = '';
             $array=users::all();
@@ -800,7 +805,7 @@ public function ref(Request $request, $id){
                    // return "$entry->id <br>";
                     $referedMembers .= '- ' . $entry->name . '<br/>';
                     $referedMembers .= $this->getRefs($array, $entry->id, $level+1);
-                    
+
                     if($level == 1){
                         $referedMembers .="1 <br>";
                     }elseif($level == 2){
@@ -818,17 +823,17 @@ public function ref(Request $request, $id){
             }
             return $referedMembers;
     }
-    
+
     //Get uplines
 function getAncestors($array, $deposit_amount, $parent = 0, $level = 0) {
   $referedMembers = '';
   $parent=users::where('id',$parent)->first();
   foreach ($array as $entry) {
-    
+
       if ($entry->id == $parent->ref_by) {
-          //get settings 
+          //get settings
           $settings=settings::where('id', '=', '1')->first();
-                    
+
            if($level == 1){
           $earnings=$settings->referral_commission1*$deposit_amount/100;
           //add earnings to ancestor balance
@@ -837,7 +842,7 @@ function getAncestors($array, $deposit_amount, $parent = 0, $level = 0) {
             'account_bal' => $entry->account_bal + $earnings,
             'ref_bonus' => $entry->ref_bonus + $earnings,
             ]);
-            
+
             //create history
              tp_transactions::create([
             'user' => $entry->id,
@@ -845,7 +850,7 @@ function getAncestors($array, $deposit_amount, $parent = 0, $level = 0) {
              'amount'=>$earnings,
              'type'=>"Ref_bonus",
             ]);
-            
+
           }elseif($level == 2){
           $earnings=$settings->referral_commission2*$deposit_amount/100;
           //add earnings to ancestor balance
@@ -854,7 +859,7 @@ function getAncestors($array, $deposit_amount, $parent = 0, $level = 0) {
             'account_bal' => $entry->account_bal + $earnings,
             'ref_bonus' => $entry->ref_bonus + $earnings,
             ]);
-            
+
             //create history
              tp_transactions::create([
             'user' => $entry->id,
@@ -862,7 +867,7 @@ function getAncestors($array, $deposit_amount, $parent = 0, $level = 0) {
              'amount'=>$earnings,
              'type'=>"Ref_bonus",
             ]);
-            
+
           }elseif($level == 3){
           $earnings=$settings->referral_commission3*$deposit_amount/100;
           //add earnings to ancestor balance
@@ -871,7 +876,7 @@ function getAncestors($array, $deposit_amount, $parent = 0, $level = 0) {
             'account_bal' => $entry->account_bal + $earnings,
             'ref_bonus' => $entry->ref_bonus + $earnings,
             ]);
-            
+
             //create history
              tp_transactions::create([
             'user' => $entry->id,
@@ -879,7 +884,7 @@ function getAncestors($array, $deposit_amount, $parent = 0, $level = 0) {
              'amount'=>$earnings,
              'type'=>"Ref_bonus",
             ]);
-            
+
           }elseif($level == 4){
           $earnings=$settings->referral_commission4*$deposit_amount/100;
           //add earnings to ancestor balance
@@ -888,7 +893,7 @@ function getAncestors($array, $deposit_amount, $parent = 0, $level = 0) {
             'account_bal' => $entry->account_bal + $earnings,
             'ref_bonus' => $entry->ref_bonus + $earnings,
             ]);
-            
+
             //create history
              tp_transactions::create([
             'user' => $entry->id,
@@ -896,7 +901,7 @@ function getAncestors($array, $deposit_amount, $parent = 0, $level = 0) {
              'amount'=>$earnings,
              'type'=>"Ref_bonus",
             ]);
-            
+
           }elseif($level == 5){
           $earnings=$settings->referral_commission5*$deposit_amount/100;
           //add earnings to ancestor balance
@@ -905,7 +910,7 @@ function getAncestors($array, $deposit_amount, $parent = 0, $level = 0) {
             'account_bal' => $entry->account_bal + $earnings,
             'ref_bonus' => $entry->ref_bonus + $earnings,
             ]);
-            
+
             //create history
              tp_transactions::create([
             'user' => $entry->id,
@@ -913,22 +918,22 @@ function getAncestors($array, $deposit_amount, $parent = 0, $level = 0) {
              'amount'=>$earnings,
              'type'=>"Ref_bonus",
             ]);
-         
+
           }
 
           if($level == 6){
           break;
           }
-          
+
           //$referedMembers .= '- ' . $entry->name . '- Level: '. $level. '- Commission: '.$earnings.'<br/>';
           $referedMembers .= $this->getAncestors($array, $deposit_amount, $entry->id, $level+1);
-      
+
        }
   }
   return $referedMembers;
 }
 
-    
+
     function generate_string($input, $strength = 16) {
         $input_length = strlen($input);
         $random_string = '';
@@ -936,7 +941,7 @@ function getAncestors($array, $deposit_amount, $parent = 0, $level = 0) {
             $random_character = $input[mt_rand(0, $input_length - 1)];
             $random_string .= $random_character;
         }
-     
+
         return $random_string;
     }
 
