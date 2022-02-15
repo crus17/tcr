@@ -618,7 +618,7 @@ public function ref(Request $request, $id){
               //get settings
               $settings=settings::where('id','1')->first();
               
-              $sendProfitEmail = !($dplan->increment_interval=="Minute" || $dplan->increment_interval=="Hourly")
+              $sendProfitEmail = !($dplan->increment_interval=="Minute" || $dplan->increment_interval=="Hourly");
 
               //check if trade mode is on
               if($settings->trade_mode=='on'){
