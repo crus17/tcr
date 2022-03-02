@@ -336,7 +336,6 @@ Montana, 59840, USA</div>
         <script src="{{ asset('zenith/js/style-customizer.js') }}"></script>
         <script src="{{ asset('zenith/js/custom.js') }}"></script>
 
-        <script src="//code.tidio.co/xnlracp74qfkqqn7ya1wunc3uwbnzrcc.js" async></script>
 </body>
 
 <!-- Mirrored from iqonicthemes.com/themes/coinex/dark/pricing.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Jan 2019 08:47:31 GMT -->

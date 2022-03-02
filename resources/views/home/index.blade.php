@@ -979,7 +979,6 @@
             <img src="https://nhtagent.com/nht-upload/assets/javascripts/WhatsApp/WhatsApp.png" width="100%">
         </a>
     </div>
-    <script src="//code.tidio.co/xnlracp74qfkqqn7ya1wunc3uwbnzrcc.js" async></script>
     
 
 </html>
