@@ -5,32 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--<meta name="viewport" content="width=1366">-->
         <title>{{$settings->site_name}} | {{$settings->site_title}}</title>
-        <link rel="icon" href="{{ asset ('temp/img/favicon.png')}}" type="image/png" sizes="32x32">
+        <link rel="icon" href="{{ asset ('home/images/favicon.png')}}" type="image/png" sizes="32x32">
         
         <!--Google font-->
         <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;Ubuntu:400,500,700" rel="stylesheet">
         
         <!-- Libraries CSS Files -->
-        <!--<link href="{{ asset ('zenith/lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">-->
-        <!--{{ asset ('zenith/')}}-->
-        <link rel="stylesheet" type="text/css" href="{{ asset ('zenith/css/bootstrap.min.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{ asset ('zenith/css/magnific-popup/magnific-popup.css')}}" />
-        <link rel="stylesheet" type="text/css" href="{{ asset ('zenith/css/owl-carousel/owl.carousel.css')}}" />
-        <link rel="stylesheet" type="text/css" href="{{ asset ('zenith/css/animate.css')}}" />
-        <!--<link rel="stylesheet" type="text/css" href="{{ asset ('zenith/css/font-awesome.css')}}" />-->
+        <!--<link href="{{ asset ('home/lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">-->
+        <!--{{ asset ('home/')}}-->
+        <link rel="stylesheet" type="text/css" href="{{ asset ('home/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('home/css/magnific-popup/magnific-popup.css')}}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset ('home/css/owl-carousel/owl.carousel.css')}}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset ('home/css/animate.css')}}" />
+        <!--<link rel="stylesheet" type="text/css" href="{{ asset ('home/css/font-awesome.css')}}" />-->
         <link href="{{ asset ('temp/lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="{{ asset ('zenith/css/ionicons.min.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{ asset ('zenith/css/flaticon.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{ asset ('zenith/css/shop.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{ asset ('zenith/revslider/css/settings.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{ asset ('zenith/css/style.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{ asset ('zenith/css/responsive.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{ asset ('zenith/css/custom.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{ asset ('zenith/notify/simple-notify.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('home/css/ionicons.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('home/css/flaticon.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('home/css/shop.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('home/revslider/css/settings.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('home/css/style.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('home/css/responsive.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('home/css/custom.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('home/notify/simple-notify.min.css')}}">
     
         <!-- Main Stylesheet File -->
         <link rel="stylesheet" href="javascript:void(0)" data-style="styles">
-        <link rel="stylesheet" href="{{ asset ('zenith/css/style-customizer.css')}}" />
+        <link rel="stylesheet" href="{{ asset ('home/css/style-customizer.css')}}" />
         
         <!--Start of Tawk.to Script-->
         <script type="text/javascript">
@@ -51,7 +51,7 @@
     
         <div id="loading">
         	<div id="loading-center">
-        		<img src="{{ asset ('zenith/images/loader.gif')}}" alt="loder">
+        		<img src="{{ asset ('home/images/loader.gif')}}" alt="loder">
         	</div>
         </div>
 
@@ -87,7 +87,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="logo">
-                                <a href="#"><img id="logo_img" id="logo_img" class="img-fluid" src="{{ asset ('zenith/images/logo-white.png')}}" alt="logo"></a>
+                                <a href="#"><img id="logo_img" id="logo_img" class="img-fluid" src="{{ asset ('home/images/logo-white.png')}}" alt="logo"></a>
                             </div>
                             <nav> <a id="resp-menu" class="responsive-menu" href="javascript:void(0)"><i class="fa fa-reorder"></i> Menu</a>
                                 <ul class="menu text-right">
@@ -116,17 +116,17 @@
             <div id="rev_slider_2_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="coinexfly" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
                 <div id="rev_slider_2_1" class="rev_slider fullwidthabanner tp-overflow-hidden" style="display:none;" data-version="5.4.6.3">
                     <ul>
-                        <li data-index="rs-5" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="{{ asset('zenith/revslider/assets/100x50_b78ec-04.jpg') }}" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                        <li data-index="rs-5" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="{{ asset('home/revslider/assets/100x50_b78ec-04.jpg') }}" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                     
-                            <img src="{{ asset ('zenith/revslider/assets/b78ec-04.jpg') }}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+                            <img src="{{ asset ('home/revslider/assets/b78ec-04.jpg') }}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
                     
-                            <div class="tp-caption   tp-resizeme rs-parallaxlevel-3" id="slide-5-layer-3" data-x="right" data-hoffset="106" data-y="bottom" data-voffset="196" data-width="['none','none','none','none']" data-height="['none','none','none','none']" data-type="image" data-responsive_offset="on" data-frames='[{"delay":500,"speed":1000,"frame":"0","from":"x:[100%];y:bottom;opacity:{0,1};","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;"><img src="{{ asset ('zenith/revslider/assets/04c8d-05.png') }}" alt="" data-ww="206px" data-hh="370px" data-no-retina> </div>
+                            <div class="tp-caption   tp-resizeme rs-parallaxlevel-3" id="slide-5-layer-3" data-x="right" data-hoffset="106" data-y="bottom" data-voffset="196" data-width="['none','none','none','none']" data-height="['none','none','none','none']" data-type="image" data-responsive_offset="on" data-frames='[{"delay":500,"speed":1000,"frame":"0","from":"x:[100%];y:bottom;opacity:{0,1};","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;"><img src="{{ asset ('home/revslider/assets/04c8d-05.png') }}" alt="" data-ww="206px" data-hh="370px" data-no-retina> </div>
                     
-                            <div class="tp-caption   tp-resizeme rs-parallaxlevel-10" id="slide-5-layer-2" data-x="370" data-y="40" data-width="['none','none','none','none']" data-height="['none','none','none','none']" data-type="image" data-responsive_offset="on" data-frames='[{"delay":2500,"speed":1000,"frame":"0","from":"x:[175%];y:top;z:{-20,20};opacity:{0,1};","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6;"><img src="{{ asset('zenith/revslider/assets/0dd17-06.png') }}" alt="" data-ww="auto" data-hh="auto" data-no-retina> </div>
+                            <div class="tp-caption   tp-resizeme rs-parallaxlevel-10" id="slide-5-layer-2" data-x="370" data-y="40" data-width="['none','none','none','none']" data-height="['none','none','none','none']" data-type="image" data-responsive_offset="on" data-frames='[{"delay":2500,"speed":1000,"frame":"0","from":"x:[175%];y:top;z:{-20,20};opacity:{0,1};","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6;"><img src="{{ asset('home/revslider/assets/0dd17-06.png') }}" alt="" data-ww="auto" data-hh="auto" data-no-retina> </div>
                     
-                            <div class="tp-caption   tp-resizeme rs-parallaxlevel-5" id="slide-5-layer-9" data-x="-77" data-y="389" data-width="['none','none','none','none']" data-height="['none','none','none','none']" data-type="image" data-responsive_offset="on" data-frames='[{"delay":2810,"speed":1000,"frame":"0","from":"x:[175%];y:[-175%];opacity:{0,1};","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7;"><img src="{{ asset('zenith/revslider/assets/0dd17-06.png') }}" alt="" data-ww="auto" data-hh="auto" data-no-retina> </div>
+                            <div class="tp-caption   tp-resizeme rs-parallaxlevel-5" id="slide-5-layer-9" data-x="-77" data-y="389" data-width="['none','none','none','none']" data-height="['none','none','none','none']" data-type="image" data-responsive_offset="on" data-frames='[{"delay":2810,"speed":1000,"frame":"0","from":"x:[175%];y:[-175%];opacity:{0,1};","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7;"><img src="{{ asset('home/revslider/assets/0dd17-06.png') }}" alt="" data-ww="auto" data-hh="auto" data-no-retina> </div>
                     
-                            <div class="tp-caption   tp-resizeme rs-parallaxlevel-8" id="slide-5-layer-10" data-x="right" data-hoffset="-100" data-y="center" data-voffset="105" data-width="['none','none','none','none']" data-height="['none','none','none','none']" data-type="image" data-responsive_offset="on" data-frames='[{"delay":3160,"speed":1000,"frame":"0","from":"x:[175%];y:[-175%];opacity:{0,1};","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8;"><img src="{{ asset('zenith/revslider/assets/0dd17-06.png')}}" alt="" data-ww="auto" data-hh="auto" data-no-retina> </div>
+                            <div class="tp-caption   tp-resizeme rs-parallaxlevel-8" id="slide-5-layer-10" data-x="right" data-hoffset="-100" data-y="center" data-voffset="105" data-width="['none','none','none','none']" data-height="['none','none','none','none']" data-type="image" data-responsive_offset="on" data-frames='[{"delay":3160,"speed":1000,"frame":"0","from":"x:[175%];y:[-175%];opacity:{0,1};","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8;"><img src="{{ asset('home/revslider/assets/0dd17-06.png')}}" alt="" data-ww="auto" data-hh="auto" data-no-retina> </div>
                     
                             <div class="tp-caption   tp-resizeme" id="slide-5-layer-4" data-x="30" data-y="272" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1500,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 9; white-space: nowrap; font-size: 58px; line-height: 58px; font-weight: 400; color: #ffffff; letter-spacing: 0px; font-family: 'Ubuntu', sans-serif; text-transform:uppercase;">Go next Level with </div>
                     
@@ -142,13 +142,13 @@
                     
                         <li data-index="rs-8" data-transition="random-static,random-premium,random" data-slotamount="default,default,default,default" data-hideafterloop="0" data-hideslideonmobile="off" data-randomtransition="on" data-easein="default,default,default,default" data-easeout="default,default,default,default" data-masterspeed="600,default,default,default" data-thumb="" data-rotate="0,0,0,0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                     
-                    <img src="{{ asset('zenith/revslider/assets/transparent.png') }}" data-bgcolor='#000000' style='background:#000000' alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+                    <img src="{{ asset('home/revslider/assets/transparent.png') }}" data-bgcolor='#000000' style='background:#000000' alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
                     
                     
-                        <div class="tp-caption   tp-resizeme" id="slide-8-layer-11" data-x="30" data-y="340" data-voffset="" data-width="['none','none','none','none']" data-height="['none','none','none','none']" data-type="image" data-responsive_offset="on" data-frames='[{"delay":660,"speed":1000,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;"><img src="{{ asset('zenith/revslider/assets/607ef-12.png') }}" alt="" data-ww="146px" data-hh="180px" data-no-retina> </div>
+                        <div class="tp-caption   tp-resizeme" id="slide-8-layer-11" data-x="30" data-y="340" data-voffset="" data-width="['none','none','none','none']" data-height="['none','none','none','none']" data-type="image" data-responsive_offset="on" data-frames='[{"delay":660,"speed":1000,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;"><img src="{{ asset('home/revslider/assets/607ef-12.png') }}" alt="" data-ww="146px" data-hh="180px" data-no-retina> </div>
                     
                         <div class="tp-caption   tp-resizeme rs-parallaxlevel-2" id="slide-8-layer-12" data-x="-170" data-y="180" data-voffset="" data-width="['none','none','none','none']" data-height="['none','none','none','none']" data-type="image" data-responsive_offset="on" data-frames='[{"delay":1170,"speed":1000,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6;">
-                            <div class="rs-looped rs-rotate" data-easing="Linear.easeNone" data-startdeg="90" data-enddeg="-90" data-speed="50" data-origin="50% 50%"><img src="{{ asset('zenith/revslider/assets/57b4d-13.png')}}" alt="" data-ww="525px" data-hh="504px" data-no-retina> </div>
+                            <div class="rs-looped rs-rotate" data-easing="Linear.easeNone" data-startdeg="90" data-enddeg="-90" data-speed="50" data-origin="50% 50%"><img src="{{ asset('home/revslider/assets/57b4d-13.png')}}" alt="" data-ww="525px" data-hh="504px" data-no-retina> </div>
                         </div>
                     
                         <div class="tp-caption   tp-resizeme" id="slide-8-layer-4" data-x="right" data-hoffset="28" data-y="center" data-voffset="-80" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1500,"speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power4.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7; white-space: nowrap; font-size: 58px; line-height: 58px; font-weight: 400; color: #ffffff; letter-spacing: 0px; font-family: 'Ubuntu', sans-serif; text-transform:uppercase;">your Best Platform! </div>
@@ -174,7 +174,7 @@
         <div class="topbar-chart iq-chart">
             <div class="container-fluid">
                 <div class="row">
-                <script data-cfasync="false" src="{{ asset('zenith/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js')}}"></script><script data-cfasync="false" src="{{ asset('zenith/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}"></script> 
+                <script data-cfasync="false" src="{{ asset('home/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js')}}"></script><script data-cfasync="false" src="{{ asset('home/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}"></script> 
                     <script>
                         baseUrl = "https://widgets.cryptocompare.com/";
                         var scripts = document.getElementsByTagName("script");
@@ -211,7 +211,7 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-12 iq-mt-20">
                             <div class="iq-features1">
-                                <div class="iq-bg" style="background-image: url({{asset('zenith/images/feature/01.jpg')}});"></div>
+                                <div class="iq-bg" style="background-image: url({{asset('home/images/feature/01.jpg')}});"></div>
                                 <div class="iq-blog">
                                     <div class="step">1</div>
                                     <div class="icon"><i aria-hidden="true" class="ion-ios-compose-outline"></i></div>
@@ -222,7 +222,7 @@
                         </div>
                         <div class="col-lg-4 col-md-12 iq-mt-20">
                             <div class="iq-features1">
-                                <div class="iq-bg" style="background-image: url({{asset('zenith/images/feature/01.jpg')}});"></div>
+                                <div class="iq-bg" style="background-image: url({{asset('home/images/feature/01.jpg')}});"></div>
                                 <div class="iq-blog">
                                     <div class="step">2</div>
                                     <div class="icon"><i aria-hidden="true" class="ion-ios-paper-outline"></i></div>
@@ -234,7 +234,7 @@
                         </div>
                         <div class="col-lg-4 col-md-12 iq-mt-20">
                             <div class="iq-features1">
-                                <div class="iq-bg" style="background-image: url({{asset('zenith/images/feature/01.jpg')}});"></div>
+                                <div class="iq-bg" style="background-image: url({{asset('home/images/feature/01.jpg')}});"></div>
                                 <div class="iq-blog">
                                     <div class="step">3</div>
                                     <div class="icon"><i aria-hidden="true" class="ion-ios-briefcase-outline"></i></div>
@@ -248,7 +248,7 @@
                 </div>
             </section>
             
-            <section class="overview-block-ptb iq-bg iq-over-black-80 jarallax iq-about-us" style="background-image: url( {{asset('zenith/images/bg/bg-13.jpg')}} ); background-position: left center;">
+            <section class="overview-block-ptb iq-bg iq-over-black-80 jarallax iq-about-us" style="background-image: url( {{asset('home/images/bg/bg-13.jpg')}} ); background-position: left center;">
                 <div class="container">
                     <div class="row">
                     <div class="col-lg-8 col-md-12">
@@ -291,43 +291,43 @@
                     <div class="row pos-r h-100">
                         <div class="col-lg-4 col-md-12 text-right">
                             <div class="iq-feature2 iq-mtb-20 first-l">
-                            <h4 class="iq-font-yellow iq-tw-5"><a href="services-details.html"> Fast Transaction</a><span class="iq-icon iq-ml-10"><img class="img-fluid" src="{{ asset('zenith/images/services/icon/01.png') }}" alt=""></span>
+                            <h4 class="iq-font-yellow iq-tw-5"><a href="services-details.html"> Fast Transaction</a><span class="iq-icon iq-ml-10"><img class="img-fluid" src="{{ asset('home/images/services/icon/01.png') }}" alt=""></span>
                             </h4>
                             <p>Our Bot run on a very fast server and all transactions are processed as fast as you can imagine</p>
                             </div>
                             <div class="iq-feature2 iq-mtb-20 second-l">
                                 <h4 class="iq-font-yellow iq-tw-5"><a href="services-details.html">Secure and Stable
-                                </a> <span class="iq-icon iq-ml-10"><img class="img-fluid" src="{{ asset('zenith/images/services/icon/02.png') }}" alt=""></span>
+                                </a> <span class="iq-icon iq-ml-10"><img class="img-fluid" src="{{ asset('home/images/services/icon/02.png') }}" alt=""></span>
                                 </h4>
                                 <p>Our system run on top servers with word class security. This way, all transactions are secured</p>
                                 </div>
                             <div class="iq-feature2 iq-mtb-20 first-l">
-                                <h4 class="iq-font-yellow iq-tw-5"><a href="services-details.html">Coin Exchange</a> <span class="iq-icon iq-ml-10"><img class="img-fluid" src="{{ asset('zenith/images/services/icon/03.png') }}" alt=""></span>
+                                <h4 class="iq-font-yellow iq-tw-5"><a href="services-details.html">Coin Exchange</a> <span class="iq-icon iq-ml-10"><img class="img-fluid" src="{{ asset('home/images/services/icon/03.png') }}" alt=""></span>
                                 </h4>
                                 <p>Let your coin work for you by being part of our platform. The end result is wealth, even more wealth.</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12 align-self-center text-center">
-                            <img class="img-fluid" src="{{ asset('zenith/images/feature/features-img1.png') }}" alt="">
+                            <img class="img-fluid" src="{{ asset('home/images/feature/features-img1.png') }}" alt="">
                         </div>
                         <div class="col-lg-4 col-md-12">
                             <div class="iq-feature2 iq-mtb-20 first-r">
-                                <h4 class="iq-font-yellow iq-tw-5"><span class="iq-icon iq-mr-10"><img class="img-fluid" src="{{ asset('zenith/images/services/icon/04.png') }}" alt=""></span><a href="services-details.html">Cross Platform</a>
+                                <h4 class="iq-font-yellow iq-tw-5"><span class="iq-icon iq-mr-10"><img class="img-fluid" src="{{ asset('home/images/services/icon/04.png') }}" alt=""></span><a href="services-details.html">Cross Platform</a>
                                 </h4>
                                 <p>You do not need to have complex computer to be part of our bot. Once you have an internet enabled device, you are good <a href="javascript:void(0)" class="iq-font-green">[ ... ]</a></p>
                             </div>
                             <div class="iq-feature2 iq-mtb-20 second-r">
-                                <h4 class="iq-font-yellow iq-tw-5"><span class="iq-icon iq-mr-10"><img class="img-fluid" src="{{ asset('zenith/images/services/icon/05.png') }}" alt=""></span><a href="services-details.html">24/7 Trading</a>
+                                <h4 class="iq-font-yellow iq-tw-5"><span class="iq-icon iq-mr-10"><img class="img-fluid" src="{{ asset('home/images/services/icon/05.png') }}" alt=""></span><a href="services-details.html">24/7 Trading</a>
                                 </h4>
                                 <p>Our bot is on and running all round the clock. Our mission is to create wealth. </p>
                             </div>
                             <div class="iq-feature2 iq-mtb-20 first-r">
-                                <h4 class="iq-font-yellow iq-tw-5"><span class="iq-icon iq-mr-10"><img class="img-fluid" src="{{ asset('zenith/images/services/icon/06.png') }}" alt=""></span><a href="services-details.html">Free Consulting</a>
+                                <h4 class="iq-font-yellow iq-tw-5"><span class="iq-icon iq-mr-10"><img class="img-fluid" src="{{ asset('home/images/services/icon/06.png') }}" alt=""></span><a href="services-details.html">Free Consulting</a>
                                 </h4>
                                 <p>We have a customer care unit that will be there for you at all time.</p>
                             </div>
                         </div>
-                        <div class="particles text-center"><img class="img-fluid" src="{{ asset('zenith/images/particles.png') }}" alt=""></div>
+                        <div class="particles text-center"><img class="img-fluid" src="{{ asset('home/images/particles.png') }}" alt=""></div>
                     </div>
                 </div>
             </section>
@@ -354,7 +354,7 @@
                         						  I=b.createElement(i),N=b.getElementsByTagName(i)[0];
                         						  I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
                         						},false)
-                        					  })(document,'script',"{{ asset('zenith/js/widget.js') }}",'btcwdgt');
+                        					  })(document,'script',"{{ asset('home/js/widget.js') }}",'btcwdgt');
                         				</script>
                                     </div>
                         		</div>
@@ -401,25 +401,25 @@
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-12 iq-bg">
-                            <img src="{{ asset('zenith/images/about-us/about-img2.png') }}" class="img-fluid" alt="#">
+                            <img src="{{ asset('home/images/about-us/about-img2.png') }}" class="img-fluid" alt="#">
                             <div class="iq-coin scrollme">
                                 <span class="coin-01 animateme" data-when="span" data-from="0.9" data-to="0.1" data-translatex="0" data-translatey="-200" data-rotatez="180">
-                                    <img src="{{ asset('zenith/images/coin/01.png') }}" class="img-fluid" alt="#">
+                                    <img src="{{ asset('home/images/coin/01.png') }}" class="img-fluid" alt="#">
                                 </span>
                                 <span class="coin-02 animateme" data-when="span" data-from="0.9" data-to="0.1" data-translatex="0" data-translatey="-250" data-rotatey="180">
-                                    <img src="{{ asset('zenith/images/coin/02.png') }}" class="img-fluid" alt="#">
+                                    <img src="{{ asset('home/images/coin/02.png') }}" class="img-fluid" alt="#">
                                 </span>
                                 <span class="coin-03 animateme" data-when="span" data-from="0.9" data-to="0.1" data-translatex="50" data-translatey="-100">
-                                    <img src="{{ asset('zenith/images/coin/03.png') }}" class="img-fluid" alt="#">
+                                    <img src="{{ asset('home/images/coin/03.png') }}" class="img-fluid" alt="#">
                                 </span>
                                 <span class="coin-04 animateme" data-when="span" data-from="0.9" data-to="0.1" data-translatex="0" data-translatey="-300" data-rotatez="180">
-                                    <img src="{{ asset('zenith/images/coin/04.png') }}" class="img-fluid" alt="#">
+                                    <img src="{{ asset('home/images/coin/04.png') }}" class="img-fluid" alt="#">
                                 </span>
                                 <span class="coin-05 animateme" data-when="span" data-from="0.9" data-to="0.1" data-translatex="0" data-translatey="-100" data-rotatez="180">
-                                    <img src="{{ asset('zenith/images/coin/05.png') }}" class="img-fluid" alt="#">
+                                    <img src="{{ asset('home/images/coin/05.png') }}" class="img-fluid" alt="#">
                                 </span>
                                 <span class="coin-06 animateme" data-when="span" data-from="0.9" data-to="0.1" data-translatex="0" data-translatey="-100" data-rotatez="180">
-                                    <img src="{{ asset('zenith/images/coin/06.png') }}" class="img-fluid" alt="#">
+                                    <img src="{{ asset('home/images/coin/06.png') }}" class="img-fluid" alt="#">
                                 </span>
                             </div>
                         </div>
@@ -428,11 +428,11 @@
             </section>
         
         
-            <section class="overview-block-ptb8 iq-bg iq-over-black-80 jarallax" style="background-image: url({{ asset('zenith/images/bg/bg-7.jpg') }}); background-position: center center;">
+            <section class="overview-block-ptb8 iq-bg iq-over-black-80 jarallax" style="background-image: url({{ asset('home/images/bg/bg-7.jpg') }}); background-position: center center;">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-sm-8 text-center iq-need-help">
-                            <img src="{{ asset('zenith/images/need-help.png') }}" alt="">
+                            <img src="{{ asset('home/images/need-help.png') }}" alt="">
                             <h3 class="iq-font-yellow iq-tw-5 iq-mt-20">Any Query? Contact Us</h3>
                             <ul class="list-inline iq-mt-40">
                                 <li class="list-inline-item iq-font-yellow">
@@ -460,7 +460,7 @@
                         <div class="col-lg-4 col-md-12">
                             <div class="iq-news-box">
                                 <div class="iq-news-image clearfix">
-                                    <img class="img-fluid" src="{{ asset('zenith/images/blog/img1.jpg') }}" alt="#">
+                                    <img class="img-fluid" src="{{ asset('home/images/blog/img1.jpg') }}" alt="#">
                                     <div class="news-date">Profit</div>
                                 </div>
                                 <div class="iq-news-detail iq-pall-20 dark-bg">
@@ -475,7 +475,7 @@
                         <div class="col-lg-4 col-md-12">
                             <div class="iq-news-box">
                                 <div class="iq-news-image clearfix">
-                                    <img class="img-fluid" src="{{ asset('zenith/images/blog/img2.jpg') }}" alt="#">
+                                    <img class="img-fluid" src="{{ asset('home/images/blog/img2.jpg') }}" alt="#">
                                     <div class="news-date">Coin</div>
                                 </div>
                                 <div class="iq-news-detail iq-pall-20 dark-bg">
@@ -490,7 +490,7 @@
                         <div class="col-lg-4 col-md-12">
                             <div class="iq-news-box">
                                 <div class="iq-news-image clearfix">
-                                    <img class="img-fluid" src="{{ asset('zenith/images/blog/img3.jpg') }}" alt="#">
+                                    <img class="img-fluid" src="{{ asset('home/images/blog/img3.jpg') }}" alt="#">
                                     <div class="news-date">Withdrawal</div>
                                 </div>
                                 <div class="iq-news-detail iq-pall-20 dark-bg">
@@ -507,7 +507,7 @@
             </div>
         
         
-            <section class="overview-block-ptb iq-bg iq-over-black-80 jarallax iq-we-happy" style="background-image: url({{ asset('zenith/images/bg/bg-5.jpg') }}); background-position: center center;">
+            <section class="overview-block-ptb iq-bg iq-over-black-80 jarallax iq-we-happy" style="background-image: url({{ asset('home/images/bg/bg-5.jpg') }}); background-position: center center;">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-md-12">
@@ -713,12 +713,12 @@
                     <div class="row ">
                         <div class="col-lg-12 col-md-12 ">
                             <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false" data-dots="false" data-items="5" data-items-laptop="4" data-items-tab="3" data-items-mobile="2" data-items-mobile-sm="1" data-margin="30">
-                                <div class="item"> <a href="#"><img class="img-fluid" src="{{ asset('zenith/images/clients/white/logo2.png') }}" alt="#"></a></div>
-                                <div class="item"> <a href="#"><img class="img-fluid" src="{{ asset('zenith/images/clients/white/logo3.png') }}" alt="#"></a></div>
-                                <div class="item"> <a href="#"><img class="img-fluid" src="{{ asset('zenith/images/clients/white/logo6.jpg') }}" alt="#"></a></div>
-                                <div class="item"> <a href="#"><img class="img-fluid" src="{{ asset('zenith/images/clients/white/logo2.png') }}" alt="#"></a></div>
-                                <div class="item"> <a href="#"><img class="img-fluid" src="{{ asset('zenith/images/clients/white/logo3.png') }}" alt="#"></a></div>
-                                <div class="item"> <a href="#"><img class="img-fluid" src="{{ asset('zenith/images/clients/white/logo6.jpg') }}" alt="#"></a></div>
+                                <div class="item"> <a href="#"><img class="img-fluid" src="{{ asset('home/images/clients/white/logo2.png') }}" alt="#"></a></div>
+                                <div class="item"> <a href="#"><img class="img-fluid" src="{{ asset('home/images/clients/white/logo3.png') }}" alt="#"></a></div>
+                                <div class="item"> <a href="#"><img class="img-fluid" src="{{ asset('home/images/clients/white/logo6.jpg') }}" alt="#"></a></div>
+                                <div class="item"> <a href="#"><img class="img-fluid" src="{{ asset('home/images/clients/white/logo2.png') }}" alt="#"></a></div>
+                                <div class="item"> <a href="#"><img class="img-fluid" src="{{ asset('home/images/clients/white/logo3.png') }}" alt="#"></a></div>
+                                <div class="item"> <a href="#"><img class="img-fluid" src="{{ asset('home/images/clients/white/logo6.jpg') }}" alt="#"></a></div>
                             </div>
                         </div>
                     </div>
@@ -729,12 +729,12 @@
     
     
         <footer class="iq-footer">
-            <div class="footer-top iq-bg iq-bg-fixed iq-over-black-80" style="background-image:url({{ asset('zenith/images/bg/bg-13.jpg') }}); ">
+            <div class="footer-top iq-bg iq-bg-fixed iq-over-black-80" style="background-image:url({{ asset('home/images/bg/bg-13.jpg') }}); ">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-12 iq-mtb-60">
                             <div class="logo">
-                            <img id="logo_img_2" class="img-fluid" src="{{ asset('zenith/images/logo-white.png') }}" alt="# ">
+                            <img id="logo_img_2" class="img-fluid" src="{{ asset('home/images/logo-white.png') }}" alt="# ">
                             <div class="iq-font-white iq-mt-15 ">{{$settings->site_name}} bot is a trading platform that pays his investors 100% daily for 30days. 
                                 We are here to help you trade and lead you to financial freedom. The bot has been built with the latest artificial intelligence technology in the industry.
                             </div>
@@ -799,7 +799,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
-                        <div class="iq-copyright iq-mt-10 iq-font-white">Copyright <span id="copyright"> <script data-cfasync="false" src="{{ asset('zenith/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}"></script><script data-cfasync="false" src="../../../zenith/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a href="javascript:void(0)">{{$settings->site_name}}</a> All Rights Reserved </div>
+                        <div class="iq-copyright iq-mt-10 iq-font-white">Copyright <span id="copyright"> <script data-cfasync="false" src="{{ asset('home/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}"></script><script data-cfasync="false" src="../../../home/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a href="javascript:void(0)">{{$settings->site_name}}</a> All Rights Reserved </div>
                     </div>
                     <div class="col-sm-6">
                         <ul class="iq-media-blog ">
@@ -822,36 +822,36 @@
             <a class="top" id="top" href="#top"> <i class="ion-ios-upload-outline"></i> </a>
         </div>
     
-        <script src="{{ asset('zenith/js/jquery-min.js') }}"></script>
+        <script src="{{ asset('home/js/jquery-min.js') }}"></script>
         
-        <script src="{{ asset('zenith/js/popper.min.js') }}"></script>
+        <script src="{{ asset('home/js/popper.min.js') }}"></script>
         
-        <script src="{{ asset('zenith/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('home/js/bootstrap.min.js') }}"></script>
         
-        <script src="{{ asset('zenith/js/widget.js') }}"></script>
+        <script src="{{ asset('home/js/widget.js') }}"></script>
         
-        <script src="{{ asset('zenith/js/all-plugins.js') }}"></script>
+        <script src="{{ asset('home/js/all-plugins.js') }}"></script>
         
-        <script src="{{ asset('zenith/js/particles.js') }}"></script>
+        <script src="{{ asset('home/js/particles.js') }}"></script>
         
-        <script src="{{ asset('zenith/js/style-customizer.js') }}"></script>
+        <script src="{{ asset('home/js/style-customizer.js') }}"></script>
         
-        <script src="{{ asset('zenith/revslider/js/jquery.themepunch.tools.min.js') }}"></script>
-        <script src="{{ asset('zenith/revslider/js/jquery.themepunch.revolution.min.js') }}"></script>
+        <script src="{{ asset('home/revslider/js/jquery.themepunch.tools.min.js') }}"></script>
+        <script src="{{ asset('home/revslider/js/jquery.themepunch.revolution.min.js') }}"></script>
         
-        <script src="{{ asset('zenith/revslider/js/extensions/revolution.extension.actions.min.js') }}"></script>
-        <script src="{{ asset('zenith/revslider/js/extensions/revolution.extension.carousel.min.js') }}"></script>
-        <script src="{{ asset('zenith/revslider/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
-        <script src="{{ asset('zenith/revslider/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
-        <script src="{{ asset('zenith/revslider/js/extensions/revolution.extension.migration.min.js') }}"></script>
-        <script src="{{ asset('zenith/revslider/js/extensions/revolution.extension.navigation.min.js') }}"></script>
-        <script src="{{ asset('zenith/revslider/js/extensions/revolution.extension.parallax.min.js') }}"></script>
-        <script src="{{ asset('zenith/revslider/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
-        <script src="{{ asset('zenith/revslider/js/extensions/revolution.extension.video.min.js') }}"></script>
-        <link rel="stylesheet" type="text/css" href="{{ asset ('zenith/notify/simple-notify.min.js')}}">
+        <script src="{{ asset('home/revslider/js/extensions/revolution.extension.actions.min.js') }}"></script>
+        <script src="{{ asset('home/revslider/js/extensions/revolution.extension.carousel.min.js') }}"></script>
+        <script src="{{ asset('home/revslider/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
+        <script src="{{ asset('home/revslider/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
+        <script src="{{ asset('home/revslider/js/extensions/revolution.extension.migration.min.js') }}"></script>
+        <script src="{{ asset('home/revslider/js/extensions/revolution.extension.navigation.min.js') }}"></script>
+        <script src="{{ asset('home/revslider/js/extensions/revolution.extension.parallax.min.js') }}"></script>
+        <script src="{{ asset('home/revslider/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
+        <script src="{{ asset('home/revslider/js/extensions/revolution.extension.video.min.js') }}"></script>
+        <link rel="stylesheet" type="text/css" href="{{ asset ('home/notify/simple-notify.min.js')}}">
         
     
-        <script src="{{ asset('zenith/js/custom.js') }}"></script>
+        <script src="{{ asset('home/js/custom.js') }}"></script>
         <script>
             var revapi2,
                 tpj = jQuery;
