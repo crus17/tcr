@@ -17,7 +17,7 @@
                 <div class="section-form-box ">
                 <div>
                     <a href="{{url('/')}}">
-                      <span style="color:#04b9f4;font-size:30px;" class="w3-hide-large"><img src="{{ asset ('zenith/images/logo-white.png')}}" width="320"></span>
+                      <span style="color:#04b9f4;font-size:30px;" class="w3-hide-large"><img src="{{ asset ('home/images/logo-white.png')}}" width="320"></span>
                     </a>
                 </div>
                 <h3 class="mb-3"> Member Login</h3>
