@@ -66,7 +66,7 @@
                             <div class="topbar-left">
                                 <ul class="list-inline">
                                     <li class="list-inline-item"><i class="fa fa-envelope-o text-blue"></i>
-                                        {{$settings->contact_email}} | info@trustprofx.com
+                                        {{$settings->contact_email}}
                                     </li>
                                 </ul>
                             </div>
